@@ -1,0 +1,58 @@
+// basic styles
+body
+	min-width: 320px
+	&.is-locked
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		height: 100%
+		overflow: hidden
+
+*
+	-webkit-tap-highlight-color: transparent
+
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
+
+a
+	color: inherit
+	text-decoration: none
+	&:hover, &:focus
+		text-decoration: none
+
+p, a, span, div
+	&::selection
+		color: #000
+		background-color: #000
+
+img
+	vertical-align: top
+	max-width: 100%
+	
+::-ms-clear,
+::-ms-reveal
+	display: none
+	width: 0
+	height: 0
+
+input:invalid
+	box-shadow: none
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+	-webkit-appearance: none
+	margin: 0
+
+video::-webkit-media-controls-start-playback-button
+	display: none !important
+	
+.obj-fit
+	width: 100%
+	height: 100%
+	object-fit: cover
+	font-family: 'object-fit: cover;'
+
+.container
+	max-width: 1140px
+	margin: 0 auto
+	padding: 0 15px
