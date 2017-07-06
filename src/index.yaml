@@ -1,5 +1,8 @@
 ProjectTitle: dvor
 
 PageList:
-- file: page.html
-  ready: 50
+- file: home-page.html
+  ready: 100
+
+- file: kak_kupit.html
+  ready: 100

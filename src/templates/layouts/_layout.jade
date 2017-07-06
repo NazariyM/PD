@@ -5,13 +5,12 @@ html
     include _head
 
   body(class=bodyClass)
-    //BEGIN out
-    .out(class=outClass)
-      block header
-        include ../partials/_header
-      block content
-    //END out
+    include ../bemto/bemto
+    block header
+      include ../components/_header
 
-    //LOAD SCRIPTS
+    block content
+
+    //load scripts
     block scripts
       script(type="text/javascript" src="js/app.js")

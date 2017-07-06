@@ -1,6 +1,11 @@
 // basic styles
 body
 	min-width: 320px
+	font-family: 'Open Sans', Arial, sans-serif
+	font-weight: 300
+	font-size: 16px
+	line-height: 1.2
+	color: $black
 	&.is-locked
 		position: fixed
 		top: 0
@@ -20,11 +25,14 @@ a
 	text-decoration: none
 	&:hover, &:focus
 		text-decoration: none
+		
+button
+	background-color: transparent
 
-p, a, span, div
+p, a, span, div, img, mark
 	&::selection
-		color: #000
-		background-color: #000
+		color: $white
+		background-color: $crimson
 
 img
 	vertical-align: top
@@ -38,6 +46,7 @@ img
 
 input:invalid
 	box-shadow: none
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button
 	-webkit-appearance: none
@@ -53,6 +62,55 @@ video::-webkit-media-controls-start-playback-button
 	font-family: 'object-fit: cover;'
 
 .container
-	max-width: 1140px
+	max-width: 1800px
 	margin: 0 auto
 	padding: 0 15px
+
+.title
+	+f('con')
+	color: $crimson
+	&_md
+		font-size: 42px
+	&_lg
+		font-size: 67px
+		line-height: 89px
+		
+.title-decor
+	position: relative
+	padding: 4px 0
+	+f('con', 36)
+	color: $crimson
+	text-align: center
+	border-top: 3px solid $crimson
+	border-bottom: 3px solid $crimson
+	&::after
+		content: ''
+		position: absolute
+		top: -45px
+		left: 50%
+		transform: translateX(-50%)
+		z-index: 1
+		width: 109px
+		height: 40px
+		background: url("../img/bg/big-title-decor.png") no-repeat 50% 50%
+	span
+		display: inline-block
+		vertical-align: middle
+		padding: 5px 0
+		border-top: 1px solid #725b55
+		border-bottom: 1px solid #725b55
+.btn
+	display: inline-block
+	vertical-align: top
+	padding: 0 39px
+	border-radius: 10px
+	transition: background-color .2s
+	&_red
+		height: 38px
+		color: $white
+		background-color: $crimson
+		font-size: 17px
+		line-height: 37px
+		+os-r
+		+hover
+			background-color: darken($crimson, 5)

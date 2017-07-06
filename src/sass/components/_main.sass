@@ -1,0 +1,52 @@
+/* ===================================
+	 nav
+	 =================================== */
+.nav
+	border-top: 2px solid $crimson
+	background-color: $beige
+	&__list
+		position: relative
+		padding: 17px 0
+		text-align: center
+		font-size: 0
+		&::before, &::after
+			content: ''
+			position: absolute
+			background-repeat: no-repeat
+			background-size: cover
+			background-position: 50% 50%
+		&::before
+			left: 10%
+			width: 100px
+			height: 24px
+			background-image: url("../img/bg/nav-decor_l.png")
+		&::after
+			right: 10%
+			width: 115px
+			height: 24px
+			background-image: url("../img/bg/nav-decor_r.png")
+		&-item
+			position: relative
+			display: inline-block
+			vertical-align: top
+			padding: 0 15px
+			line-height: 1
+			&::after
+				content: ''
+				position: absolute
+				top: -10px
+				right: 0
+				width: 1px
+				height: 40px
+				background: rgba($crimson, .2)
+				bg
+		&-item.is-active &-link
+			color: $crimson
+			border-bottom-color: $crimson
+		&-link
+			display: block
+			font-size: 20px
+			border-bottom: 1px solid transparent
+			+trs
+			+hover
+				color: $crimson

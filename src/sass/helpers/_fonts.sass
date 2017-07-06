@@ -1,9 +1,14 @@
-//+font("AMG-Anahit-ss", AMG-Anahit-ss)
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=cyrillic')
+@import url('https://fonts.googleapis.com/css?family=Roboto:700&subset=cyrillic')
++font("Bebas-Neue-Bold", Bebas-Neue-Bold)
++font("Constantia", Constantia)
 
 =f($name, $font-size: null, $line-height: null, $letter-spacing: null)
 	$font-family: null
-	//@if $name == "amg"
-	//	$font-family: "AMG-Anahit-ss"
+	@if $name == "con"
+		$font-family: "Constantia"
+	@if $name == "beb-b"
+		$font-family: "Bebas-Neue-Bold"
 	font-family: $font-family, Arial, sans-serif
 	@if $font-family != null
 		font-weight: normal
@@ -13,3 +18,16 @@
 		line-height: $line-height/$font-size
 	@if $letter-spacing != null
 		letter-spacing: ($letter-spacing / 1000) * 1em
+
+
+=os-l
+	font-family: 'Open Sans', Arial, sans-serif
+	font-weight: 300
+	
+=os-r
+	font-family: 'Open Sans', Arial, sans-serif
+	font-weight: 400
+	
+=rob-b
+	font-family: 'Roboto', Arial, sans-serif
+	font-weight: 400

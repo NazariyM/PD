@@ -1,0 +1,44 @@
+.header
+	&__in
+		padding: 20px 0
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		background-size: cover
+	&__container
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__title-decor
+		flex-basis: 522px
+		
+.address
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	+os-r
+	&__item
+		position: relative
+		padding-left: 30px
+		&::before
+			content: ''
+			position: absolute
+			top: 8px
+			left: 0
+		&_link
+			font-size: 20px
+			line-height: 44px
+			&::before
+				+s('loc-marker')
+			span
+				border-bottom: 2px dashed #262423
+				transition: .2s
+				+hover
+					border-bottom-color: transparent
+		&_tel
+			font-size: 24px
+			line-height: 39px
+			&::before
+				+s('phone')
+	&__btn
+		align-self: flex-end
+	
