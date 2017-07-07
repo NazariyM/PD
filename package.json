@@ -65,6 +65,7 @@
   },
   "dependencies": {
     "dotdotdot": "^1.7.0",
-    "object-fit-images": "^3.2.3"
+    "object-fit-images": "^3.2.3",
+    "svg4everybody": "^2.1.8"
   }
 }

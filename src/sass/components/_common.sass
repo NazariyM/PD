@@ -29,7 +29,7 @@ a
 button
 	background-color: transparent
 
-p, a, span, div, img, mark
+h1, h2, h3, h4, h5, h6, p, a, span, div, img, mark, ul, li
 	&::selection
 		color: $white
 		background-color: $crimson
@@ -66,16 +66,8 @@ video::-webkit-media-controls-start-playback-button
 	margin: 0 auto
 	padding: 0 15px
 
-.title
-	+f('con')
-	color: $crimson
-	&_md
-		font-size: 42px
-	&_lg
-		font-size: 67px
-		line-height: 89px
-		
-.title-decor
+// titles
+.title-decor-lg
 	position: relative
 	padding: 4px 0
 	+f('con', 36)
@@ -90,15 +82,38 @@ video::-webkit-media-controls-start-playback-button
 		left: 50%
 		transform: translateX(-50%)
 		z-index: 1
-		width: 109px
-		height: 40px
-		background: url("../img/bg/big-title-decor.png") no-repeat 50% 50%
+		+s('big-title-decor')
 	span
 		display: inline-block
 		vertical-align: middle
 		padding: 5px 0
 		border-top: 1px solid #725b55
 		border-bottom: 1px solid #725b55
+		
+.title-decor-md
+	+f('con', 67, 89)
+	
+.title-decor-sm
+	+f('con', 42)
+	color: $crimson
+	text-align: center
+	span
+		position: relative
+		padding: 0 100px
+		&::before, &::after
+			content: ''
+			position: absolute
+			top: calc(50% - 16px)
+			z-index: 1
+		&::before
+			left: 0
+			+s('title-decor-sm')
+		&::after
+			right: 0
+			transform: rotateY(-180deg)
+			+s('title-decor-sm')
+		
+// buttons
 .btn
 	display: inline-block
 	vertical-align: top
