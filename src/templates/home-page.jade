@@ -1,10 +1,17 @@
 ---
-title: Index Page
+title: Главная
 ---
 extends layouts/_layout
 block content
 
-  +b.MAIN.main
-    +b.home(style='background-image: url(img/bg/home-view_bg.jpg)')
-      +e.side
-        include components/_category
+  +b.MAIN.home.main._home
+    +e.bg(style='background-image: url(img/bg/home-view_bg.jpg)')
+    +e.side
+      include components/_category
+      //begin time-bar
+      +b.time-bar.home__time-bar
+        +e.BUTTON.btn.is-active(type='button')
+          +icon('icon-sun', 'time-bar__icon')
+        +e.BUTTON.btn(type='button')
+          +icon('icon-moon', 'time-bar__icon')
+      //end time-bar

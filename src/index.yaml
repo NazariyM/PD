@@ -1,8 +1,8 @@
-ProjectTitle: dvor
+ProjectTitle: Преображенский Двор
 
 PageList:
 - file: home-page.html
   ready: 100
 
-- file: kak_kupit.html
+- file: how-to-buy.html
   ready: 100

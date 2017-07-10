@@ -1,0 +1,13 @@
+if partnersList ? partnersList : partnersList = ['partner-1', 'partner-2', 'partner-3', 'partner-4', 'partner-5']
+if partnersTitle ? partnersTitle : partnersTitle = ['Банки партнеры']
+
+//begin partners
++b.partners(class= partnersClass ? partnersClass : '')
+	+e.container.container
+		+e.H2.title.title-decor-sm
+			+e.SPAN= partnersTitle
+		+e.list
+			for itemPic in partnersList
+				+e.A.item(href='#!')
+					+e.IMG.pic(src='img/content/#{itemPic}.jpg')
+//end partners

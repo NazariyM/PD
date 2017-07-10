@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Index Page</title>
+    <title>Главная</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -50,22 +50,24 @@
         </div>
       </header>
       <!--end header-->
-      <main class="main" role="main">
-        <div style="background-image: url(img/bg/home-view_bg.jpg)" class="home">
-          <div class="home__side">
-            <!--begin category-->
-            <div class="category">
-              <a href="#!" class="category__item category__item_red">
-                <div style="background-image: url(&quot;img/bg/cat-img_1.jpg&quot;)" class="category__item-img category__item-img_skyline"></div><span class="category__item-text">Коммерческая недвижимость</span></a>
-              <a href="#!" class="category__item category__item_red">
-                <div style="background-image: url(&quot;img/bg/cat-img_2.jpg&quot;)" class="category__item-img category__item-img_brickwall"></div><span class="category__item-text">Из чего<br/>строим</span></a>
-              <a href="#!" class="category__item category__item_beige">
-                <div style="background-image: url(&quot;img/bg/cat-img_3.jpg&quot;)" class="category__item-img category__item-img_loupe"></div><span class="category__item-text">Поиск<br/>квартиры</span></a>
-              <a href="#!" class="category__item category__item_beige">
-                <div style="background-image: url(&quot;img/bg/cat-img_4.jpg&quot;)" class="category__item-img category__item-img_view-arr"></div><span class="category__item-text">Панорамная<br/>съёмка</span></a>
-            </div>
-            <!--end category-->
+      <main class="home main main_home" role="main">
+        <div style="background-image: url(img/bg/home-view_bg.jpg)" class="home__bg"></div>
+        <div class="home__side">
+          <!--begin category-->
+          <div class="category">
+            <a href="#!" class="category__item category__item_red">
+              <div style="background-image: url(&quot;img/bg/cat-img_1.jpg&quot;)" class="category__item-img category__item-img_skyline"></div><span class="category__item-text">Коммерческая недвижимость</span></a>
+            <a href="#!" class="category__item category__item_red">
+              <div style="background-image: url(&quot;img/bg/cat-img_2.jpg&quot;)" class="category__item-img category__item-img_brickwall"></div><span class="category__item-text">Из чего<br/>строим</span></a>
+            <a href="#!" class="category__item category__item_beige">
+              <div style="background-image: url(&quot;img/bg/cat-img_3.jpg&quot;)" class="category__item-img category__item-img_loupe"></div><span class="category__item-text">Поиск<br/>квартиры</span></a>
+            <a href="#!" class="category__item category__item_beige">
+              <div style="background-image: url(&quot;img/bg/cat-img_4.jpg&quot;)" class="category__item-img category__item-img_view-arr"></div><span class="category__item-text">Панорамная<br/>съёмка</span></a>
           </div>
+          <!--end category-->
+          <!--begin time-bar-->
+          <div class="time-bar home__time-bar"><button type="button" class="time-bar__btn is-active"><svg class="icon-sun time-bar__icon"><use xlink:href="img/sprite.svg#icon-sun"></use></svg></button><button type="button" class="time-bar__btn"><svg class="icon-moon time-bar__icon"><use xlink:href="img/sprite.svg#icon-moon"></use></svg></button></div>
+          <!--end time-bar-->
         </div>
       </main>
     </div>

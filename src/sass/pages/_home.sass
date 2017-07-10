@@ -1,9 +1,11 @@
 .home
-	display: flex
-	justify-content: flex-end
-	padding: 25px 45px
-	height: 100%
-	background-size: 100% 100%
+	
+	&__bg
+		+coverdiv
+		+cover
+		background-size: 100% 100%
+		z-index: -1
 	&__side
 		flex: 0 0 180px
-	
+	&__time-bar
+		margin-top: 50px
