@@ -1,21 +1,33 @@
 .header
 	position: relative
 	flex: 0 0 400px
-	overflow: hidden
-	padding: 70px 0 0
+	overflow-x: hidden
+	overflow-y: auto
+	padding: 70px 0 23px
 	background: #f0d4aa url("../img/bg/header-decor_bg.png") no-repeat 50% 50%
 	border-right: 3px solid $crimson
 	&::after
 		position: absolute
-		top: calc(50% - 163px)
-		right: -24px
+		top: calc(45% - 163px)
+		right: -25px
 		content: ''
 		+s('vert-decor_red')
 	&__in
+		display: flex
+		flex-direction: column
+		height: 100%
 		max-width: 300px
 		margin: 0 auto
+	&__title-decor
+		margin: auto 0 63px
+		
 	&__logo
 		margin: 0 auto 60px
+	&__menu
+		padding: 0 0 15px 65px
+	
+	h1
+		+hide-text
 		
 /* menu
 	----------------------------------- */
@@ -25,6 +37,8 @@
 		+os-r
 		line-height: 1
 		&-item
+			&:not(:first-child)
+				margin-top: 6px
 			&.is-active span
 				border-bottom-color: $crimson
 				color: $crimson
@@ -49,7 +63,7 @@
 			+tr(transform .25s ease-in)
 	&__sub-list
 		display: none
-		padding: 30px
+		padding: 30px 0 30px 6px
 		li
 			position: relative
 			padding-left: 30px
@@ -61,7 +75,7 @@
 				z-index: 1
 				+s('arr-long')
 			&:not(:first-child)
-				margin-top: 10px
+				margin-top: 8px
 			a
 				font-size: 16px
 				+hover
@@ -70,13 +84,12 @@
 /* address
 	----------------------------------- */
 .address
-	display: flex
-	flex-direction: column
-	align-items: flex-start
+	$this: &
 	+os-r
 	&__item
 		position: relative
-		padding-left: 30px
+		margin-bottom: 10px
+		padding-left: 40px
 		&::before
 			content: ''
 			position: absolute
@@ -97,9 +110,15 @@
 			line-height: 39px
 			&::before
 				+s('phone')
-	&__btn
-		align-self: flex-end
-	
+				
+	&_header
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		padding: 0 18px
+		#{$this}__btn
+			align-self: center
+
 /* logo
 	----------------------------------- */
 .logo

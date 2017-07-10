@@ -1,0 +1,73 @@
+.category
+	display: flex
+	flex-direction: column
+	&__item
+		$item: &
+		position: relative
+		height: 180px
+		width: 180px
+		border-radius: 50%
+		text-align: center
+		+tr(background .3s)
+		border: 8px solid transparent
+		&::after
+			content: ''
+			position: absolute
+			top: -8px
+			left: -8px
+			right: -8px
+			bottom: -8px
+			border: 1px solid rgba(#c7143f, .4)
+			border-radius: 50%
+		&:hover #{$item}-img::before,
+		&:hover #{$item}-img::after,
+		&:hover #{$item}-text
+			opacity: 0
+		&:not(:first-child)
+			margin-top: 40px
+		&_red &-img::before,
+		&_beige &-img::before
+			content: ''
+			+coverdiv
+			overflow: hidden
+			border-radius: 50%
+			transition: opacity .3s .1s ease-in-out
+		&_red &-img::before
+			background: rgba(#c7143f, .9)
+		&_beige &-img::before
+			background: rgba(#fad5a9, .9)
+		&_beige &-text
+			margin-top: 95px
+			color: $crimson
+		&-img
+			border-radius: 50%
+			overflow: hidden
+			+coverdiv
+			&::after
+				position: relative
+				content: ''
+				display: block
+				margin: 27px auto 0
+				z-index: 1
+				transition: opacity .3s .1s ease-in-out
+			&_skyline::after
+				+s('skyline')
+			&_brickwall::after
+				+s('brickwall')
+			&_loupe::after
+				margin-top: 44px
+				+s('loupe')
+			&_view-arr::after
+				margin-top: 18px
+				+s('view-arr')
+				
+		&-text
+			position: relative
+			display: block
+			margin-top: 85px
+			font-size: 17px
+			line-height: 22px
+			color: $white
+			z-index: 2
+			+os-r
+			transition: opacity .3s .1s ease-in-out

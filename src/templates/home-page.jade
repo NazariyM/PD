@@ -4,5 +4,7 @@ title: Index Page
 extends layouts/_layout
 block content
 
-  +b.MAIN.main.home(style='background-image: url(img/bg/home-view_bg.jpg)')
-    +e.in
+  +b.MAIN.main
+    +b.home(style='background-image: url(img/bg/home-view_bg.jpg)')
+      +e.side
+        include components/_category

@@ -1,0 +1,15 @@
+if categoryList ? categoryList : categoryList = [{colorMod: 'red', picMod: 'skyline', img: '1', text: 'Коммерческая недвижимость'}, {colorMod: 'red', picMod: 'brickwall', img: '2', text: 'Из чего', brText: 'строим'}, {colorMod: 'beige', picMod: 'loupe', img: '3', text: 'Поиск', brText: 'квартиры'}, {colorMod: 'beige', picMod: 'view-arr', img: '4', text: 'Панорамная', brText: 'съёмка'}]
+
+//begin category
++b.category(class= categoryClass ? categoryClass : '')
+	mixin categoryItem(item)
+		+e.A.item(class='_#{item.colorMod}' href='#!')
+			+e.DIV.item-img(class='_#{item.picMod}' style='background-image: url("img/bg/cat-img_#{item.img}.jpg")')
+			+e.SPAN.item-text= item.text
+				if item.brText
+					+e.BR
+					= item.brText
+
+	each item in categoryList
+		+categoryItem(item)
+//end category

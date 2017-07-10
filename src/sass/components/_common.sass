@@ -83,8 +83,7 @@ video::-webkit-media-controls-start-playback-button
 	&::before, &::after
 		content: ''
 		position: absolute
-		left: 50%
-		transform: translateX(-50%)
+		left: calc(50% - 32px)
 		z-index: 1
 	&::after
 		top: -45px
@@ -96,16 +95,22 @@ video::-webkit-media-controls-start-playback-button
 		border-top: 1px solid #725b55
 		border-bottom: 1px solid #725b55
 	&_double
+		padding: 5px 0
 		font-size: 21px
 		border-top-width: 1px
 		border-bottom-width: 1px
 		span
+			padding: 0
 			border-top-color: #d1ac88
 			border-bottom-color: #d1ac88
-		&::after
-			+s('title-decor-xs')
+			line-height: 25px
 		&::before
-			+s('title-decor-xs')
+			top: -25px
+			+s('title-decor-xs_t')
+		&::after
+			top: auto
+			bottom: -25px
+			+s('title-decor-xs_b')
 
 .title-decor-md
 	+f('con', 67, 89)
