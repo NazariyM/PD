@@ -60,7 +60,12 @@ video::-webkit-media-controls-start-playback-button
 	height: 100%
 	object-fit: cover
 	font-family: 'object-fit: cover;'
-
+	
+// layout
+.layout
+	display: flex
+	overflow: hidden
+	height: 100vh
 .container
 	max-width: 1800px
 	margin: 0 auto
@@ -75,21 +80,33 @@ video::-webkit-media-controls-start-playback-button
 	text-align: center
 	border-top: 3px solid $crimson
 	border-bottom: 3px solid $crimson
-	&::after
+	&::before, &::after
 		content: ''
 		position: absolute
-		top: -45px
 		left: 50%
 		transform: translateX(-50%)
 		z-index: 1
-		+s('big-title-decor')
+	&::after
+		top: -45px
+		+s('title-decor-lg')
 	span
 		display: inline-block
 		vertical-align: middle
 		padding: 5px 0
 		border-top: 1px solid #725b55
 		border-bottom: 1px solid #725b55
-		
+	&_double
+		font-size: 21px
+		border-top-width: 1px
+		border-bottom-width: 1px
+		span
+			border-top-color: #d1ac88
+			border-bottom-color: #d1ac88
+		&::after
+			+s('title-decor-xs')
+		&::before
+			+s('title-decor-xs')
+
 .title-decor-md
 	+f('con', 67, 89)
 	

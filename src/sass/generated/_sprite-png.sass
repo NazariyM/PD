@@ -1,13 +1,21 @@
 $icons: (0:0)
-$icons: map-merge($icons,('big-title-decor': (X: -57px, Y:-54px, W: 109px, H: 40px, TW: 323px, TH: 327px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('horiz-decor': (X: -57px, Y:0px, W: 266px, H: 44px, TW: 323px, TH: 327px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('loc-marker': (X: -271px, Y:-54px, W: 23px, H: 28px, TW: 323px, TH: 327px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('nav-decor': (X: -152px, Y:-104px, W: 100px, H: 24px, TW: 323px, TH: 327px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('phone': (X: -106px, Y:-146px, W: 24px, H: 26px, TW: 323px, TH: 327px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('sun': (X: -57px, Y:-146px, W: 39px, H: 39px, TW: 323px, TH: 327px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('title-decor-sm': (X: -176px, Y:-54px, W: 85px, H: 32px, TW: 323px, TH: 327px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('title-decor_r': (X: -57px, Y:-104px, W: 85px, H: 32px, TW: 323px, TH: 327px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('vert-decor': (X: 0px, Y:0px, W: 47px, H: 327px, TW: 323px, TH: 327px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('arr-long': (X: -192px, Y:-104px, W: 12px, H: 9px, TW: 380px, TH: 327px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('brickwall': (X: -114px, Y:-233px, W: 44px, H: 44px, TW: 380px, TH: 327px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('horiz-decor': (X: -114px, Y:0px, W: 266px, H: 44px, TW: 380px, TH: 327px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('loc-marker': (X: -305px, Y:-233px, W: 23px, H: 28px, TW: 380px, TH: 327px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('loupe': (X: -217px, Y:-233px, W: 37px, H: 37px, TW: 380px, TH: 327px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('moon': (X: -264px, Y:-233px, W: 31px, H: 34px, TW: 380px, TH: 327px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('nav-decor': (X: -114px, Y:-199px, W: 100px, H: 24px, TW: 380px, TH: 327px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('phone': (X: -338px, Y:-233px, W: 24px, H: 26px, TW: 380px, TH: 327px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('skyline': (X: -114px, Y:-132px, W: 53px, H: 57px, TW: 380px, TH: 327px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('sun': (X: -168px, Y:-233px, W: 39px, H: 39px, TW: 380px, TH: 327px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('title-decor-lg': (X: -192px, Y:-54px, W: 109px, H: 40px, TW: 380px, TH: 327px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('title-decor-sm': (X: -177px, Y:-132px, W: 85px, H: 32px, TW: 380px, TH: 327px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('title-decor-xs': (X: -311px, Y:-54px, W: 65px, H: 24px, TW: 380px, TH: 327px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('title-decor_r': (X: -272px, Y:-132px, W: 85px, H: 32px, TW: 380px, TH: 327px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('vert-decor': (X: -57px, Y:0px, W: 47px, H: 327px, TW: 380px, TH: 327px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('vert-decor_red': (X: 0px, Y:0px, W: 47px, H: 327px, TW: 380px, TH: 327px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('view-arr': (X: -114px, Y:-54px, W: 68px, H: 68px, TW: 380px, TH: 327px, IMG: '../img/sprite.png')))
 
 
 // Gets an attribute from the sass map
@@ -44,57 +52,105 @@ $icons: map-merge($icons,('vert-decor': (X: 0px, Y:0px, W: 47px, H: 327px, TW: 3
   +sprite-retina($i)  
 
 //
-//.icon-big-title-decor
-//  width: 109px
-//  height: 40px
+//.icon-arr-long
+//  width: 12px
+//  height: 9px
 //  background-image: url('../img/sprite.png')
-//  background-position: -57px -54px
+//  background-position: -192px -104px
+//
+//.icon-brickwall
+//  width: 44px
+//  height: 44px
+//  background-image: url('../img/sprite.png')
+//  background-position: -114px -233px
 //
 //.icon-horiz-decor
 //  width: 266px
 //  height: 44px
 //  background-image: url('../img/sprite.png')
-//  background-position: -57px 0px
+//  background-position: -114px 0px
 //
 //.icon-loc-marker
 //  width: 23px
 //  height: 28px
 //  background-image: url('../img/sprite.png')
-//  background-position: -271px -54px
+//  background-position: -305px -233px
+//
+//.icon-loupe
+//  width: 37px
+//  height: 37px
+//  background-image: url('../img/sprite.png')
+//  background-position: -217px -233px
+//
+//.icon-moon
+//  width: 31px
+//  height: 34px
+//  background-image: url('../img/sprite.png')
+//  background-position: -264px -233px
 //
 //.icon-nav-decor
 //  width: 100px
 //  height: 24px
 //  background-image: url('../img/sprite.png')
-//  background-position: -152px -104px
+//  background-position: -114px -199px
 //
 //.icon-phone
 //  width: 24px
 //  height: 26px
 //  background-image: url('../img/sprite.png')
-//  background-position: -106px -146px
+//  background-position: -338px -233px
+//
+//.icon-skyline
+//  width: 53px
+//  height: 57px
+//  background-image: url('../img/sprite.png')
+//  background-position: -114px -132px
 //
 //.icon-sun
 //  width: 39px
 //  height: 39px
 //  background-image: url('../img/sprite.png')
-//  background-position: -57px -146px
+//  background-position: -168px -233px
+//
+//.icon-title-decor-lg
+//  width: 109px
+//  height: 40px
+//  background-image: url('../img/sprite.png')
+//  background-position: -192px -54px
 //
 //.icon-title-decor-sm
 //  width: 85px
 //  height: 32px
 //  background-image: url('../img/sprite.png')
-//  background-position: -176px -54px
+//  background-position: -177px -132px
+//
+//.icon-title-decor-xs
+//  width: 65px
+//  height: 24px
+//  background-image: url('../img/sprite.png')
+//  background-position: -311px -54px
 //
 //.icon-title-decor_r
 //  width: 85px
 //  height: 32px
 //  background-image: url('../img/sprite.png')
-//  background-position: -57px -104px
+//  background-position: -272px -132px
 //
 //.icon-vert-decor
 //  width: 47px
 //  height: 327px
 //  background-image: url('../img/sprite.png')
+//  background-position: -57px 0px
+//
+//.icon-vert-decor_red
+//  width: 47px
+//  height: 327px
+//  background-image: url('../img/sprite.png')
 //  background-position: 0px 0px
+//
+//.icon-view-arr
+//  width: 68px
+//  height: 68px
+//  background-image: url('../img/sprite.png')
+//  background-position: -114px -54px
 //

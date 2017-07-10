@@ -1,16 +1,74 @@
 .header
+	position: relative
+	flex: 0 0 400px
+	overflow: hidden
+	padding: 70px 0 0
+	background: #f0d4aa url("../img/bg/header-decor_bg.png") no-repeat 50% 50%
+	border-right: 3px solid $crimson
+	&::after
+		position: absolute
+		top: calc(50% - 163px)
+		right: -24px
+		content: ''
+		+s('vert-decor_red')
 	&__in
-		padding: 20px 0
-		background-repeat: no-repeat
-		background-position: 50% 50%
-		background-size: cover
-	&__container
-		display: flex
-		justify-content: space-between
-		align-items: center
-	&__title-decor
-		flex-basis: 522px
+		max-width: 300px
+		margin: 0 auto
+	&__logo
+		margin: 0 auto 60px
 		
+/* menu
+	----------------------------------- */
+.menu
+	&__list
+		$list: &
+		+os-r
+		line-height: 1
+		&-item
+			&.is-active span
+				border-bottom-color: $crimson
+				color: $crimson
+			&.is-active #{$list}-icon
+				transform: scaleY(-1)
+		&-link
+			font-size: 18px
+			cursor: pointer
+			+hover
+				color: $crimson
+			span
+				display: inline-block
+				vertical-align: middle
+				padding-bottom: 3px
+				border-bottom: 2px solid transparent
+		&-icon
+			display: inline-block
+			vertical-align: baseline
+			margin-left: 6px
+			fill: $crimson
+			font-size: 6px
+			+tr(transform .25s ease-in)
+	&__sub-list
+		display: none
+		padding: 30px
+		li
+			position: relative
+			padding-left: 30px
+			&::before
+				content: ''
+				position: absolute
+				left: 0
+				top: 2px
+				z-index: 1
+				+s('arr-long')
+			&:not(:first-child)
+				margin-top: 10px
+			a
+				font-size: 16px
+				+hover
+					color: $crimson
+				
+/* address
+	----------------------------------- */
 .address
 	display: flex
 	flex-direction: column
@@ -42,3 +100,10 @@
 	&__btn
 		align-self: flex-end
 	
+/* logo
+	----------------------------------- */
+.logo
+	display: block
+	img
+		display: block
+		margin: 0 auto

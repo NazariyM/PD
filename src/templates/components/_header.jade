@@ -1,20 +1,74 @@
 //begin header
 +b.HEADER.header
 	//+e.H1.title Преображенский двор
-	+e.in(style='background-image: url(img/bg/header_bg.jpg)')
-		+e.container.container
-			+e.A.logo.logo(href='#!')
-				+e.IMG(src='img/logo.png')
+	+e.in
+		+e.A.logo.logo(href='#!')
+			+e.IMG(src='img/logo.png')
 
-			+e.H2.title-decor.title-decor-lg
-				+e.SPAN Оазис респектабельной жизни в историческом центре Самары
+		+b.menu
+			+e.UL.list.js-menu-list
+				+e.LI.list-item.is-active
+					+e.A.list-link
+						+e.SPAN Концепция проекта
+						+icon('icon-arr-smp', 'menu__list-icon')
+					+e.UL.sub-list
+						+e.LI
+							+e.A(href='#!') О проекте
+						+e.LI
+							+e.A(href='#!') Историческая справка
+						+e.LI
+							+e.A(href='#!') О застройщике
+						+e.LI
+							+e.A(href='#!') Документация
+						+e.LI
+							+e.A(href='#!') Техническая карта
+						+e.LI
+							+e.A(href='#!') Преимущества
 
-			+b.address._header
-				+e.A.item._link(href='#!')
-					+e.SPAN Адрес офиса продаж
-				+e.A.item._tel(href='tel:+78462443504') +7 (846) 244-35-04
-				+e.A.btn.btn._red(href='#!') Оставить заявку
+				+e.LI.list-item
+					+e.A.list-link(href='#!')
+						+e.SPAN Расположение
 
-	-var navClass = '_header'
-	include ../components/_nav
+				+e.LI.list-item
+					+e.A.list-link
+						+e.SPAN Цены и планировки
+						+icon('icon-arr-smp', 'menu__list-icon')
+					+e.UL.sub-list
+						+e.LI
+							+e.A(href='#!') О проекте
+						+e.LI
+							+e.A(href='#!') Историческая справка
+						+e.LI
+							+e.A(href='#!') О застройщике
+						+e.LI
+							+e.A(href='#!') Документация
+						+e.LI
+							+e.A(href='#!') Техническая карта
+						+e.LI
+							+e.A(href='#!') Преимущества
+
+				+e.LI.list-item
+					+e.A.list-link(href='#!')
+						+e.SPAN Как купить
+				+e.LI.list-item
+					+e.A.list-link(href='#!')
+						+e.SPAN Дневник стройки
+				+e.LI.list-item
+					+e.A.list-link(href='#!')
+						+e.SPAN Безопасность
+				+e.LI.list-item
+					+e.A.list-link(href='#!')
+						+e.SPAN Новости и Акции
+				+e.LI.list-item
+					+e.A.list-link(href='#!')
+						+e.SPAN Контакты
+
+		+e.H2.title-decor.title-decor-lg._double
+			+e.SPAN Уют премиум класса в историческом центре Самары
+
+		+b.address.side-block__address
+			+e.A.item._link(href='#!')
+				+e.SPAN Адрес офиса продаж
+			+e.A.item._tel(href='tel:+78462443504') +7 (846) 244-35-04
+			+e.A.btn.btn._red(href='#!') Оставить заявку
 //end header
