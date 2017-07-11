@@ -1,0 +1,45 @@
+.history
+	&__container
+		padding: 0
+	&__title span
+		padding: 0 96px
+	&__article
+		margin: 50px 0 0
+		color: $grey
+		&-top
+			display: flex
+			margin-bottom: 40px
+		&-title
+			margin-top: -11px
+			margin-bottom: 23px
+			+f('con', 24)
+		&-img
+			position: relative
+			flex: 0 1 463px
+			&::before, &::after
+				content: ''
+				position: absolute
+				+s('horiz-decor-xs')
+				left: calc(50% - 88px)
+			&::before
+				top: -15px
+			&::after
+				bottom: -15px
+				+rotate(180)
+			&-decor
+				&::before, &::after
+					content: ''
+					position: absolute
+					+s('horiz-decor-xs_l')
+					top: calc(50% - 88px)
+				&::before
+					left: -15px
+				&::after
+					right: -15px
+					+rotate(180)
+		&-text
+			flex: 1 1 830px
+			margin-left: 42px
+		&-sub-title
+			margin: 20px 0
+			+f('con', 16)

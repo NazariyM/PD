@@ -1,0 +1,54 @@
+.about
+	&__container
+		padding: 0
+	&__title
+		margin-bottom: 55px
+	&__descr
+		margin-bottom: 40px
+		&-item
+			line-height: 24px
+			&:not(:first-child)
+				margin-top: 24px
+				
+	&__slider
+		margin: 0 auto
+		&-item
+		
+		.slick-arrow
+			position: absolute
+			top: calc(50% - 24px)
+			height: 48px
+			width: 48px
+			border: 2px solid $crimson
+			border-radius: 50%
+			+hide-text
+			&::before
+				content: ''
+				position: absolute
+				top: 13px
+				left: 5px
+				+s('sld-btn')
+		.slick-next
+			left: 0
+		.slick-prev
+			right: 0
+			&::before
+				+rotate(180)
+				
+		&_concept
+			max-width: 1320px
+			padding: 0 95px
+		&_concept &-item
+			height: 239px
+			margin: 0 6px
+		&_default
+			max-width: 1340px
+			padding: 0 98px
+		&_default &-item
+			height: 198px
+			margin: 0 10px
+	
+	&_default &__title span
+		padding: 0 164px
+	&_default &__descr
+		margin-bottom: 70px

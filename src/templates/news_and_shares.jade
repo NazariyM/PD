@@ -1,10 +1,10 @@
 ---
-title: Новости и акции
+title: ПД Новости и акции
 ---
 extends layouts/_layout
 block content
 	//begin main
-	+b.MAIN.main.news
+	+b.MAIN.main._news
 		//begin news-tabs
 		+b.tabs._news.js-tabs
 			+e.container.container
@@ -114,4 +114,9 @@ block content
 						+e.more-text
 							+b.A.link(href='#!') Больше акций
 		//end shares
+
+		//-category
+		-categoryClass = '_float-bottom'
+		-categoryList = [{colorMod: 'beige', picMod: 'loupe', img: '3', text: 'Поиск', brText: 'квартиры'}]
+			include components/_category
 	//end main

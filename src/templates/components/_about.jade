@@ -1,0 +1,20 @@
+//begin about
++b.about(class= about.classMod ? about.classMod : '')
+	+e.container.container
+		+e.H2.title.title-decor-sm
+			+e.SPAN= about.title
+		+e.descr
+			mixin descrItem(item)
+				+e.descr-item
+					+e.P.descr-text= item.textOne
+					if item.textTwo || item.textThree
+						+e.P.descr-text= item.textTwo
+						+e.P.descr-text= item.textThree
+			each item in descrList
+				+descrItem(item)
+
+		+e.slider(class= about.sliderClass ? about.sliderClass : '')
+			for sliderImg in sliderList
+				+e.slider-item
+					+b.IMG.obj-fit(src='img/content/about-#{sliderImg}.jpg')
+//end about

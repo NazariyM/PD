@@ -9,3 +9,12 @@ PageList:
 
 - file: news_and_shares.html
   ready: 100
+
+- file: history.html
+  ready: 100
+
+- file: about-1.html
+  ready: 100
+
+- file: about-2.html
+  ready: 100
