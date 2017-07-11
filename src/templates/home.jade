@@ -3,8 +3,8 @@ title: Главная
 ---
 extends layouts/_layout
 block content
-
-  +b.MAIN.home.main._home
+  //begin main
+  +b.MAIN.home.main
     +e.bg(style='background-image: url(img/bg/home-view_bg.jpg)')
     +e.side
       include components/_category
@@ -15,3 +15,4 @@ block content
         +e.BUTTON.btn(type='button')
           +icon('icon-moon', 'time-bar__icon')
       //end time-bar
+  //end main

@@ -1,8 +1,11 @@
 ProjectTitle: Преображенский Двор
 
 PageList:
-- file: home-page.html
+- file: home.html
   ready: 100
 
 - file: how-to-buy.html
+  ready: 100
+
+- file: news_and_shares.html
   ready: 100

@@ -1,16 +1,17 @@
 .how-buy
-	padding: 100px 0 0
+	justify-content: space-around
 	
 /* tabs
 	----------------------------------- */
 .tabs
+	$tabs: &
 	position: relative
 	&::after
 		content: ''
 		position: absolute
 		z-index: 2
-		left: calc(50% - 122px)
-		bottom: 40px
+		left: calc(50% - 133px)
+		bottom: 45px
 		+s('horiz-decor')
 	&__container
 		max-width: 1012px
@@ -39,7 +40,7 @@
 	&__content
 		position: relative
 		min-height: 415px
-		padding: 50px 50px 100px 50px
+		padding: 40px 50px 100px
 		border-radius: 0 0 15px 15px
 		border: 1px solid $beige
 		background-color: $white
@@ -49,11 +50,12 @@
 			position: absolute
 			top: 20px
 			+s('vert-decor')
+			width: 26px
 			z-index: 1
 		&::before
-			left: -30px
+			left: -27px
 		&::after
-			right: -30px
+			right: -27px
 			transform: rotate(-180deg)
 		&-title
 			margin-bottom: 35px
@@ -61,10 +63,30 @@
 			color: $crimson
 			text-align: center
 		&-descr
+			text-indent: 20px
+			text-align-last: center
 			&:not(:first-child)
 				margin-top: 20px
+	&__article
+		display: flex
+		&-text
+			margin-left: 50px
+		#{$tabs}__content-descr
+			text-align: left
+			text-align-last: left
+	&_news
+	
 				
-/* clients
+/* partners
 	----------------------------------- */
-.clients
+.partners
+	&__container
+		max-width: 1072px
+	&__title
+		margin-bottom: 70px
+	&__list
+		display: flex
+		justify-content: space-between
 	&__item
+		padding: 0 5px
+	
