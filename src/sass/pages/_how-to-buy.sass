@@ -65,18 +65,83 @@
 		&-descr
 			text-indent: 20px
 			text-align-last: center
-			&:not(:first-child)
+			color: #444444
+			&:not(:first-of-type)
 				margin-top: 20px
 	&__article
 		display: flex
+		align-items: flex-start
+		color: #444444
+		&-img-wrap
+			flex: 0 1 306px
+			margin-top: 7px
 		&-text
+			flex: 0 1 528px
 			margin-left: 50px
+		&-date
+			+os-r
+			font-size: 14px
+		&-btn
+			margin-top: 25px
+			padding: 0 60px
+		#{$tabs}__content-title
+			margin-bottom: 17px
+		#{$tabs}__content-descr
+			margin-top: 20px
+			text-indent: 0
+		#{$tabs}__content-title,
 		#{$tabs}__content-descr
 			text-align: left
 			text-align-last: left
+	&__card-row
+		display: flex
+		justify-content: space-between
+		margin-top: 63px
+	&__card
+		position: relative
+		flex: 0 0 238px
+		.no-touch &:hover &-title
+			border-bottom-color: transparent
+		&-img-wrap
+			margin-bottom: 9px
+			border: 1px solid #e2cccc
+		&-date
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 1
+			padding: 7px 6px
+			background: #70292b
+			color: $white
+		&-title
+			display: inline
+			padding-bottom: 2px
+			border-bottom: 1px solid $crimson
+			+f('con', 24)
+			color: $crimson
+			transition: border-color .25s
+	&__more-text
+		text-align: center
+		margin-top: 48px
+			
 	&_news
-	
-				
+		margin-bottom: 100px
+	&_news::after
+		display: none
+	&_news &__title span
+		padding: 0 138px
+	&_news &__content
+		padding: 43px 48px 18px
+		
+	&_shares::after
+		display: none
+	&_shares &__content
+		padding: 43px 48px 18px
+		border-radius: 15px
+	&_shares &__title span
+		padding: 0 156px
+		
+
 /* partners
 	----------------------------------- */
 .partners
