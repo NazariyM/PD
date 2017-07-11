@@ -13,8 +13,20 @@ PageList:
 - file: history.html
   ready: 100
 
-- file: about-1.html
+- file: about-concept.html
   ready: 100
 
-- file: about-2.html
+- file: about-developer.html
+  ready: 100
+
+- file: documentation.html
+  ready: 100
+
+- file: advantages.html
+  ready: 100
+
+- file: contacts.html
+  ready: 100
+
+- file: about-disctrict.html
   ready: 100

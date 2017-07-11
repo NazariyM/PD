@@ -1,0 +1,20 @@
+---
+title: ПД Преимущества
+---
+extends layouts/_layout
+block content
+	//begin main
+	+b.MAIN.main._advantage
+		//begin advantages
+		+b.advantage
+			+e.container.container
+				+e.H2.title.title-decor-sm
+					+e.SPAN Преимущества
+
+		//end advantages
+	//end main
+
+	//-category
+	-categoryClass = '_float-top'
+	-categoryList = [{colorMod: 'beige', picMod: 'planning', img: '3', text: 'Выбор', brText: 'планировки'}]
+	include components/_category

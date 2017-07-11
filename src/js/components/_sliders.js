@@ -5,7 +5,7 @@ const $aboutSlider = $('.js-about-slider');
 
 const aboutSldDefaults = {
   autoplay: true,
-  autoplaySpeed: 4000,
+  autoplaySpeed: 5000,
   slidesToScroll: 1,
   speed: 500
 };
