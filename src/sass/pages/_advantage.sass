@@ -1,0 +1,114 @@
+.advantage
+	&__title
+		padding-right: 90px
+		span
+			padding: 0 170px
+	&__in
+		position: relative
+		min-height: 850px
+		margin-top: 55px
+		&-title
+			position: absolute
+			top: 43.2%
+			left: 27%
+			max-width: 610px
+	&__item
+		position: absolute
+		display: flex
+		align-items: center
+		flex-direction: column
+		min-width: 220px
+		&::after
+			content: ''
+			position: absolute
+			width: 1px
+			background: rgba($crimson, .5)
+		&-circle
+			position: relative
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 98px
+			height: 98px
+			margin-bottom: 6px
+			border-radius: 50%
+			border: 2px solid $crimson
+			&::after
+				content: ''
+				position: absolute
+				top: 7px
+				left: 7px
+				right: 7px
+				bottom: 7px
+				border-radius: 50%
+				border: 1px solid $crimson
+		&-pic
+			&_bench
+				+s('bench')
+			&_car-parking
+				+s('car-parking')
+			&_room
+				+s('room')
+			&_piggy-bank
+				+s('piggy-bank')
+			&_waterfall
+				+s('waterfall')
+			&_building
+				+s('building')
+			&_handshake
+				+s('handshake')
+			&_camera
+				+s('camera')
+			&_artificial
+				+s('artificial')
+			&_baby
+				+s('baby')
+			&_swing
+				+s('swing')
+		&-descr
+			font-size: 18px
+			color: $grey
+			text-align: center
+		&-details
+			display: none
+			
+		&_1
+			top: 4%
+			left: 16%
+			&::after
+				height: 272px
+				bottom: -180%
+				right: 1%
+				+rotate(131)
+		&_2
+			top: 1.4%
+			left: 40%
+		&_3
+			top: 4%
+			left: 64.2%
+		&_4
+			left: 83%
+			top: 21.3%
+		&_5
+			top: 45%
+			left: 76%
+		&_6
+			top: 68%
+			left: 64%
+		&_7
+			top: 83%
+			left: 49%
+		&_8
+			top: 83%
+			left: 30%
+		&_9
+			top: 68%
+			left: 15%
+		&_10
+			top: 45%
+			left: 5%
+		&_11
+			top: 21%
+			left: -1%
+		&_11 &-descr
+			max-width: 180px

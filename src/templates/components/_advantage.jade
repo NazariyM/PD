@@ -1,0 +1,25 @@
+if advantage ? advantage : advantage = []
+if advantage.title ? advantage.title : advantage.title = ['Преимущества']
+if advantage.inTitle ? advantage.inTitle : advantage.inTitle = ['Когда представления о комфортной жизни воплощаются в реальность']
+
+//begin advantage
++b.advantage(class= advantageClass ? advantageClass : '')
+	+e.H2.title.title-decor-sm
+		+e.SPAN= advantage.title
+	+e.in
+		+e.H3.in-title.title-decor-lg
+			+e.SPAN= advantage.inTitle
+
+		mixin advantageItem(item)
+			+e.item(class='_#{item.posClass}')
+				+e.item-circle
+					+e.item-pic(class='_#{item.pic}')
+				+e.P.item-descr= item.descr
+					if item.brDescr
+						+e.BR
+						= item.brDescr
+				+e.DIV.item-details
+					+e.P= item.detailsDescr
+		each item in advantageList
+			+advantageItem(item)
+//end advantage

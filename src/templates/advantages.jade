@@ -5,13 +5,63 @@ extends layouts/_layout
 block content
 	//begin main
 	+b.MAIN.main._advantage
-		//begin advantages
-		+b.advantage
-			+e.container.container
-				+e.H2.title.title-decor-sm
-					+e.SPAN Преимущества
 
-		//end advantages
+			//-advantage
+			-
+				var advantageList = [{
+				descr: 'Двор без машин',
+				posClass: '1',
+				pic: 'bench'
+				},{
+				descr: 'От квартиры до',
+				brDescr: 'машины - пара минут',
+				posClass: '2',
+				pic: 'car-parking'
+				},{
+				descr: 'Квартиры с террасами',
+				posClass: '3',
+				pic: 'room'
+				},{
+				descr: 'Экономия на',
+				brDescr: 'коммунальных платежах',
+				posClass: '4',
+				pic: 'piggy-bank'
+				},{
+				descr: 'Рядом набережная',
+				posClass: '5',
+				pic: 'waterfall'
+				},{
+				descr: 'Эстетика как',
+				brDescr: 'образ жизни',
+				posClass: '6',
+				pic: 'building'
+				},{
+				descr: 'Приятное окружение',
+				brDescr: 'на долгие годы',
+				posClass: '7',
+				pic: 'handshake'
+				},{
+				descr: 'Система видеонаблюдения',
+				brDescr: 'по всему ЖК',
+				posClass: '8',
+				pic: 'camera'
+				},{
+				descr: 'Современные',
+				brDescr: 'инженерные системы',
+				posClass: '9',
+				pic: 'artificial'
+				},{
+				descr: 'Беби-клуб, фитнес зал,',
+				brDescr: 'салон красоты',
+				posClass: '10',
+				pic: 'baby'
+				},{
+				descr: 'Детская площадка',
+				brDescr: 'с антитравматичным покрытием',
+				posClass: '11',
+				pic: 'swing'
+				}];
+			include components/_advantage
 	//end main
 
 	//-category
