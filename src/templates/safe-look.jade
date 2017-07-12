@@ -1,0 +1,27 @@
+---
+title: Смотри, как безопасно
+---
+extends layouts/_layout
+block content
+	//begin main
+	+b.MAIN.main
+		//begin section
+		+b.SECTION.section._safe-look._decorated-grad(style='background-image: url(img/bg/safe-look_bg.png)')
+			+e.container.container
+				+e.H2.title.title-decor-xl._red
+					+e.SPAN Смотри,
+						+e.BR
+						| как безопасно
+				+e.P.descr._has-decor-red Мой дом - моя крепость. Будьте уверены в абсолютной безопасности проживания: доступ на территорию жилого комплекса только для своих, система круглосуточного видеонаблюдения, пункт охраны с тревожной кнопкой.
+				+e.A.btn.btn._red-lg(href='#!') Оставить заявку
+
+			//begin arrow-link
+			+b.A.arrow-link._red._pos(href='#!') Смотри, как комфортно
+			//end arrow-link
+		//end section
+	//end main
+
+	//-category
+	-categoryClass = '_float-bottom-mod'
+	-categoryList = [{colorMod: 'beige', picMod: 'planning', img: '3', text: 'Выбор', brText: 'планировки'}]
+	include components/_category

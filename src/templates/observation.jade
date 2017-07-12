@@ -1,0 +1,24 @@
+---
+title: Круглосуточное видеонаблюдение
+---
+extends layouts/_layout
+block content
+	//begin main
+	+b.MAIN.main
+		//begin section
+		+b.SECTION.section._observ(style='background-image: url(img/bg/observation_bg.jpg)')
+			+e.container.container
+				+e.H2.title.title-decor-xl._red
+					+e.SPAN Круглосуточное видеонаблюдение
+				+e.P.descr Вся территория жилого комплекса оборудована современной системой видеонаблюдения. Пункт охраны оснащен тревожной кнопкой: моментальное реагирование на любую внештатную ситуацию гарантировано.
+				+e.A.btn.btn._red-lg._decor(href='#!') Оставить заявку
+				//begin arrow-link
+				+b.A.arrow-link._white(href='#!') Безопасность передвижения
+				//end arrow-link
+		//end section
+	//end main
+
+	//-category
+	-categoryClass = '_float-bottom-mod'
+	-categoryList = [{colorMod: 'beige', picMod: 'planning', img: '3', text: 'Выбор', brText: 'планировки'}]
+	include components/_category

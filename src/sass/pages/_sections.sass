@@ -1,0 +1,111 @@
+.section
+	height: 100%
+	+cover
+	&__container
+		display: flex
+		flex-direction: column
+		align-items: center
+		height: 100%
+		text-align: center
+	&__descr
+		font-size: 24px
+		line-height: 36px
+		text-align: center
+		&_has-decor
+			position: relative
+			padding-bottom: 100px
+			&-white
+				position: relative
+				padding-bottom: 100px
+				color: $white
+				&::after
+					content: ''
+					position: absolute
+					left: calc(50% - 122px)
+					bottom: 10px
+					z-index: 1
+					+s('horiz-decor-w')
+			&-red
+				@extend .section__descr_has-decor-white
+				color: $crimson
+				&::after
+					+s('horiz-decor-red')
+				
+	&_decorated
+		position: relative
+		&::after
+			content: ''
+			+coverdiv
+			z-index: -1
+			background-image: url("../img/bg/bg-pattern.png")
+	&_decorated-grad
+		@extend .section-decorated
+		&::after
+			background-image: url("../img/bg/bg-pattern.png"), linear-gradient(to top, #e7e7e7 0%, #ffffff 100%) !important
+				
+	&_beauty &__container
+		max-width: 1020px
+	&_beauty &__title
+		margin: 50px 0 235px
+	&_beauty &__descr
+		max-width: 770px
+		margin: 0 auto 20px
+		color: $white
+		
+	&_safe &__container
+		max-width: 1060px
+	&_safe &__title
+		margin: 50px 0 35px
+	&_safe &__descr
+		margin-bottom: 235px
+		color: $crimson
+	&_safe &__btn
+		margin: 0 auto 240px
+		
+	&_observ &__container
+		max-width: 940px
+	&_observ &__title
+		margin: 80px 0 40px
+	&_observ &__descr
+		margin-bottom: 235px
+		color: $crimson
+	&_observ &__btn
+		margin: 0 auto 240px
+		
+	&_closed &__container
+		max-width: 940px
+	&_closed &__title
+		margin: 80px 0 40px
+	&_closed &__descr
+		margin-bottom: 235px
+		color: $crimson
+	&_closed &__btn
+		margin: 0 auto 240px
+		
+	&_safe-look
+		background-size: auto
+		background-position: right 6px center
+	&_safe-look &__container
+		max-width: 900px
+		justify-content: center
+		margin: 0
+	&_safe-look &__descr
+		max-width: 570px
+		
+	&_comfort
+		background-size: auto
+		background-position: right center
+	&_comfort &__container
+		max-width: 900px
+		justify-content: center
+		margin: 0
+	&_comfort &__descr
+		max-width: 620px
+
+.section-decorated
+	position: relative
+	&::after
+		content: ''
+		+coverdiv
+		z-index: -1
+		background-image: url("../img/bg/bg-pattern.png")

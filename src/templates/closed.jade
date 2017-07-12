@@ -1,0 +1,25 @@
+---
+title: Закрытая территория
+---
+extends layouts/_layout
+block content
+	//begin main
+	+b.MAIN.main
+		//begin section
+		+b.SECTION.section._closed(style='background-image: url(img/bg/closed_bg.jpg)')
+			+e.container.container
+				+e.H2.title.title-decor-xl._red
+					+e.SPAN Закрытая территория
+				+e.P.descr Въезд на территорию жилого комплекса закрыт для посторонних. Без лишних прохожих и чужих машин – двор вашего дома принадлежит только вам.
+				+e.A.btn.btn._red-lg._decor(href='#!') Оставить заявку
+				//begin arrow-link
+				+b.A.arrow-link._white(href='#!') Круглосуточное видеонаблюдение
+				//end arrow-link
+		//end section
+
+	//end main
+
+	//-category
+	-categoryClass = '_float-bottom-mod'
+	-categoryList = [{colorMod: 'beige', picMod: 'planning', img: '3', text: 'Выбор', brText: 'планировки'}]
+	include components/_category

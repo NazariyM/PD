@@ -76,7 +76,14 @@ video::-webkit-media-controls-start-playback-button
 		&::after
 			right: 0
 			transform: rotateY(-180deg)
-	
+	&_red
+		color: $crimson
+		span
+			display: block
+			&::before, &::after
+				top: 50%
+				+s('title-decor-xl_red')
+				
 .title-decor-lg
 	position: relative
 	padding: 0 0 4px
@@ -169,6 +176,17 @@ video::-webkit-media-controls-start-playback-button
 		text-transform: uppercase
 		+hover
 			background-color: darken($crimson, 5)
+	&_decor
+		position: relative
+		&::after
+			content: ''
+			pointer-events: none
+			position: absolute
+			left: calc(50% - 122px)
+			bottom: -160%
+			z-index: 1
+			+s('horiz-decor-w')
+			
 /* links
 	----------------------------------- */
 .link

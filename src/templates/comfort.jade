@@ -1,0 +1,23 @@
+---
+title: Смотри, как комфортно
+---
+extends layouts/_layout
+block content
+	//begin main
+	+b.MAIN.main
+		//begin section
+		+b.SECTION.section._comfort._decorated(style='background-image: url(img/bg/comfort_bg.png)')
+			+e.container.container
+				+e.H2.title.title-decor-xl._red
+					+e.SPAN Смотри,
+						+e.BR
+						| как комфортно
+				+e.P.descr._has-decor-red Позвольте себе новый уровень комфорта! Провожайте и встречайте своих родных не выходя на улицу: от дверей квартиры до подземного паркинга вас доставит скоростной лифт.
+				+e.A.btn.btn._red-lg(href='#!') Оставить заявку
+		//end section
+	//end main
+
+	//-category
+	-categoryClass = '_float-bottom-mod'
+	-categoryList = [{colorMod: 'beige', picMod: 'planning', img: '3', text: 'Выбор', brText: 'планировки'}]
+	include components/_category

@@ -4,19 +4,18 @@ title: Смотри, как красиво
 extends layouts/_layout
 block content
 	//begin main
-	+b.MAIN.main._beauty
-		//begin beauty
-		+b.beauty(style='background-image: url(img/bg/beauty_bg.jpg)')
+	+b.MAIN.main
+		//begin section
+		+b.SECTION.section._beauty(style='background-image: url(img/bg/beauty_bg.jpg)')
 			+e.container.container
 				+e.H2.title.title-decor-xl
 					+e.SPAN Смотри, как красиво
-				+e.P.descr.descr-decor._white Центральные городские улицы и набережная в нескольких минутах ходьбы. Такие прогулки всегда будут в удовольствие, ведь каждый восход и каждый закат на Волге неповторимы!
-				+e.BUTTON.btn.btn._red-lg(type='button') Оставить заявку
-		//end beauty
-
-		//begin arrow-link
-		+b.A.arrow-link._white(href='#!') Смотри, как безопасно
-		//end arrow-link
+				+e.P.descr._has-decor-white Центральные городские улицы и набережная в нескольких минутах ходьбы. Такие прогулки всегда будут в удовольствие, ведь каждый восход и каждый закат на Волге неповторимы!
+				+e.A.btn.btn._red-lg(href='#!') Оставить заявку
+				//begin arrow-link
+				+b.A.arrow-link._white(href='#!') Смотри, как безопасно
+				//end arrow-link
+		//end section
 	//end main
 
 	//-category

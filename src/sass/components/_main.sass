@@ -30,30 +30,13 @@
 		justify-content: space-between
 	&__item
 		padding: 0 5px
-		
-/* description decor
-	----------------------------------- */
-.descr-decor
-	position: relative
-	padding-bottom: 100px
-	&::after
-		content: ''
-		position: absolute
-		left: calc(50% - 122px)
-		bottom: 10px
-		z-index: 1
-		+s('horiz-decor-red')
-	&_white::after
-		+s('horiz-decor-w')
-		
+
 /* arrow-link
 	----------------------------------- */
 .arrow-link
-	position: absolute
-	left: 50%
-	bottom: 22px
-	z-index: 10
-	transform: translateX(-50%)
+	position: relative
+	margin-top: auto
+	margin-bottom: 22px
 	text-align: center
 	+os-b
 	font-size: 18px
@@ -72,4 +55,10 @@
 		color: $white
 		&::before
 			+s('arr_b-white')
-		
+	&_pos
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		bottom: 22px
+		z-index: 1
+		margin: 0
