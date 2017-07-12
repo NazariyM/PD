@@ -1,0 +1,44 @@
+.markers
+	&__list
+		display: flex
+		justify-content: space-between
+		flex: 1 1 100%
+		max-width: 1400px
+	&__item
+		display: flex
+		align-items: center
+		margin: 0 10px
+		cursor: pointer
+		.no-touch &:hover &-text
+			color: $crimson
+			text-decoration: underline
+		&-pic
+			display: block
+			margin-right: 15px
+			&_child-garden
+				+s('child-garden')
+			&_school
+				+s('school')
+			&_shopping
+				+s('shopping')
+			&_food
+				+s('food')
+			&_coffee
+				+s('coffee')
+			&_theatre
+				+s('theatre')
+			&_rest
+				+s('rest')
+		&-text
+			color: $grey
+			font-size: 18px
+	&_view
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		z-index: 10
+		display: flex
+		justify-content: center
+		height: 110px
+		background: $white

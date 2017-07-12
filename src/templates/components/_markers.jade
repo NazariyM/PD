@@ -1,0 +1,12 @@
+if markersList ? markersList : markersList = [{pic: 'child-garden', text: 'Детские сады'}, {pic: 'school', text: 'Школы'}, {pic: 'shopping', text: 'Торговые центры'}, {pic: 'food', text: 'Продукты'}, {pic: 'coffee', text: 'Рестораны и кафе'}, {pic: 'theatre', text: 'Театры'}, {pic: 'rest', text: 'Места для отдыха'}]
+
+//begin markers
++b.markers(class= markersClass ? markersClass : '')
+	+e.list
+		mixin markersItem(item)
+			+e.BUTTON(type='button').item
+				+e.I.item-pic(class='_#{item.pic}')
+				+e.item-text= item.text
+		each item in markersList
+			+markersItem(item)
+//end markers

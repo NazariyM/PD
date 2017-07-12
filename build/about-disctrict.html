@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>ПД Контакты</title>
+    <title>ПД О районе</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -55,17 +55,19 @@
         <!--begin view-->
         <div class="view">
           <div id="map" class="view__map"></div>
-          <!--begin contact pop-up-->
-          <div class="contact-pop">
-            <h2 class="contact-pop__title">Клубный дом “Преображенский двор”</h2><address class="contact-pop__address">Адрес: ул. Водников, 33</address>
-            <form action="#!">
-              <div class="contact-pop__form-row">
-                <div class="contact-pop__form-field"><input type="text" placeholder="Ваше имя" class="input" /></div>
-                <div class="contact-pop__form-field"><input type="text" placeholder="Ваш вопрос" class="input" /></div>
-              </div>
-            </form>
+          <!--begin markers-->
+          <div class="markers markers_view">
+            <div class="markers__list"><button type="button" class="markers__item"><i class="markers__item-pic markers__item-pic_child-garden"></i><div class="markers__item-text">Детские сады</div></button><button type="button" class="markers__item"><i class="markers__item-pic markers__item-pic_school"></i><div class="markers__item-text">Школы</div></button>
+              <button
+                type="button" class="markers__item"><i class="markers__item-pic markers__item-pic_shopping"></i>
+                <div class="markers__item-text">Торговые центры</div>
+                </button><button type="button" class="markers__item"><i class="markers__item-pic markers__item-pic_food"></i><div class="markers__item-text">Продукты</div></button><button type="button" class="markers__item"><i class="markers__item-pic markers__item-pic_coffee"></i><div class="markers__item-text">Рестораны и кафе</div></button>
+                <button
+                  type="button" class="markers__item"><i class="markers__item-pic markers__item-pic_theatre"></i>
+                  <div class="markers__item-text">Театры</div>
+                  </button><button type="button" class="markers__item"><i class="markers__item-pic markers__item-pic_rest"></i><div class="markers__item-text">Места для отдыха</div></button></div>
           </div>
-          <!--end contact pop-up-->
+          <!--end markers-->
         </div>
         <!--end view-->
       </main>

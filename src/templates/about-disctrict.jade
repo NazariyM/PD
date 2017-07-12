@@ -1,5 +1,5 @@
 ---
-title: ПД Контакты
+title: ПД О районе
 ---
 extends layouts/_layout
 block content
@@ -8,17 +8,9 @@ block content
 		//begin view
 		+b.view
 			#map.view__map
-			//begin contact pop-up
-			+b.contact-pop
-				+e.H2.title Клубный дом “Преображенский двор”
-				+e.P.ADDRESS.address Адрес: ул. Водников, 33
-				+e.FORM(action='#!')
-					+e.form-row
-						+e.form-field
-							+b.INPUT.input(type='text' placeholder='Ваше имя')
-						+e.form-field
-							+b.INPUT.input(type='text' placeholder='Ваш вопрос')
-			//end contact pop-up
+			//-markers
+			-markersClass = '_view';
+				include components/_markers
 		//end view
 	//end main
 
