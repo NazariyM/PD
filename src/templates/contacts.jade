@@ -1,0 +1,34 @@
+---
+title: ПД Контакты
+---
+extends layouts/_layout
+block content
+	//begin main
+	+b.MAIN.main._view
+		//begin view
+		+b.view
+			#map.view__map
+			//begin contact pop-up
+			+b.contact-pop
+				+e.H2.title Клубный дом “Преображенский двор”
+				+e.P.ADDRESS.address Адрес: ул. Водников, 33
+				+e.FORM(action='#!')
+					+e.form-row
+						+e.form-field
+							+b.INPUT.input(type='text' placeholder='Ваше имя')
+						+e.form-field
+							+b.INPUT.input(type='text' placeholder='Ваш вопрос')
+					+e.BUTTON.form-btn.btn._red(type='submit') Свяжитесь со мной
+
+			//end contact pop-up
+		//end view
+	//end main
+
+	//-category
+	-categoryClass = '_float-bottom'
+	-categoryList = [{colorMod: 'beige', picMod: 'loupe', img: '3', text: 'Поиск', brText: 'квартиры'}]
+	include components/_category
+
+block scripts
+	script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9Ce7om3IPU27xiTdg8xDE5aGTKw5lX50")
+	script(async type="text/javascript" src="js/app.js")

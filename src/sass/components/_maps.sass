@@ -1,0 +1,37 @@
+.view
+	+coverdiv
+	&__map
+		height: 100%
+		width: 100%
+	
+.contact-pop
+	position: absolute
+	top: 95px
+	left: calc(50% - 454px)
+	z-index: 10
+	min-width: 908px
+	padding: 30px 50px 20px
+	border-radius: 10px
+	border: 2px solid $beige
+	background-color: $white
+	text-align: center
+	&__title
+		margin-bottom: 15px
+		+f('con', 31)
+		color: $crimson
+	&__address
+		margin-bottom: 30px
+		color: $grey
+		font-size: 24px
+		font-style: normal
+	&__form-row
+		display: flex
+		margin: 0 -10px 30px
+	&__form-field
+		flex: 1 1 50%
+		margin: 0 10px
+	&__form-btn
+		padding: 0 21px
+		height: 42px
+		line-height: 42px
+	

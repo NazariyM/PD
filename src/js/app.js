@@ -4,6 +4,7 @@ import objectFitImages from 'object-fit-images';
 import './components/_tabs';
 import './components/_menu';
 import './components/_sliders';
+import './components/_map';
 import './common';
 import './_global';
 
