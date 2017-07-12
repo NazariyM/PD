@@ -58,6 +58,25 @@ video::-webkit-media-controls-start-playback-button
 	font-family: 'object-fit: cover;'
 	
 // titles
+.title-decor-xl
+	+f('con', 67, 72)
+	color: $white
+	text-align: center
+	span
+		position: relative
+		padding: 0 176px
+		&::before, &::after
+			content: ''
+			position: absolute
+			top: 42%
+			z-index: 1
+			+s('title-decor-xl')
+		&::before
+			left: 0
+		&::after
+			right: 0
+			transform: rotateY(-180deg)
+	
 .title-decor-lg
 	position: relative
 	padding: 0 0 4px
@@ -72,12 +91,11 @@ video::-webkit-media-controls-start-playback-button
 		position: absolute
 		left: calc(50% - 32px)
 		z-index: 1
+		+s('title-decor-lg')
 	&::after
 		top: -45px
-		+s('title-decor-lg')
 	&::before
 		bottom: -45px
-		+s('title-decor-lg')
 		+rotate(180)
 	span
 		display: inline-block
@@ -98,15 +116,13 @@ video::-webkit-media-controls-start-playback-button
 			line-height: 25px
 		&::before
 			top: -25px
-			+s('title-decor-xs_t')
 			transform: none
+			+s('title-decor-xs_t')
 		&::after
 			top: auto
 			bottom: -25px
 			+s('title-decor-xs_b')
-.title-decor-md
-	+f('con', 67, 89)
-	
+			
 .title-decor-sm
 	+f('con', 42)
 	color: $crimson
@@ -119,14 +135,13 @@ video::-webkit-media-controls-start-playback-button
 			position: absolute
 			top: calc(50% - 10px)
 			z-index: 1
+			+s('title-decor-sm')
 		&::before
 			left: 0
-			+s('title-decor-sm')
 		&::after
 			right: 0
 			transform: rotateY(-180deg)
-			+s('title-decor-sm')
-		
+			
 // buttons
 .btn
 	display: inline-block
@@ -143,7 +158,17 @@ video::-webkit-media-controls-start-playback-button
 		+os-r
 		+hover
 			background-color: darken($crimson, 5)
-			
+	&_red-lg
+		padding: 0 27px
+		height: 49px
+		line-height: 49px
+		color: $white
+		background: $crimson
+		+rob-b
+		font-size: 24px
+		text-transform: uppercase
+		+hover
+			background-color: darken($crimson, 5)
 /* links
 	----------------------------------- */
 .link

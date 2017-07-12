@@ -30,3 +30,21 @@ PageList:
 
 - file: about-disctrict.html
   ready: 100
+
+- file: beauty.html
+  ready: 100
+
+- file: safe.html
+  ready: 100
+
+- file: safe-look.html
+  ready: 100
+
+- file: closed.html
+  ready: 100
+
+- file: observation.html
+  ready: 100
+
+- file: comfort.html
+  ready: 100

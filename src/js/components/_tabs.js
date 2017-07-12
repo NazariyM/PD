@@ -11,7 +11,7 @@ function initTabs() {
     $tabsNav.on('click', function(ev) {
       ev.preventDefault();
       $tabsNav.removeClass('is-active').eq($(this).index()).addClass('is-active');
-      $tabsContent.hide().eq($(this).index()).slideDown(500);
+      $tabsContent.slideUp().eq($(this).index()).slideDown(500);
     }).eq(0).addClass('is-active');
   });
 }

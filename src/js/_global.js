@@ -9,16 +9,16 @@ export const {
   OPEN,
   touch
 } = {
-  //variables and values
-  DOC     : $(document),
-  WIN     : $(window),
-  HTML    : $('html'),
-  BODY    : $('body'),
-  ACTIVE  : 'is-active',
-  SHOW    : 'is-show',
-  OPEN    : 'is-open',
+  // variables and values
+  DOC: $(document),
+  WIN: $(window),
+  HTML: $('html'),
+  BODY: $('body'),
+  ACTIVE: 'is-active',
+  SHOW: 'is-show',
+  OPEN: 'is-open',
 
-  //detect functions
+  // detect functions
   touch() {
     return 'ontouchstart' in window;
   }
