@@ -1,5 +1,5 @@
 .advantage
-	padding-top: 150px
+	padding: 20px 0
 	&__title
 		padding-right: 90px
 		span
@@ -13,6 +13,7 @@
 			top: 43.2%
 			left: 27%
 			max-width: 610px
+			cursor: default
 	&__item
 		position: absolute
 		display: flex
@@ -24,6 +25,8 @@
 			position: absolute
 			width: 1px
 			background: rgba($crimson, .5)
+		&.low-index
+			z-index: -0
 		&-circle
 			position: relative
 			display: flex
@@ -33,6 +36,7 @@
 			height: 98px
 			margin-bottom: 6px
 			border-radius: 50%
+			z-index: 20
 			border: 2px solid $crimson
 			&::after
 				content: ''
@@ -43,36 +47,105 @@
 				bottom: 7px
 				border-radius: 50%
 				border: 1px solid $crimson
+				transition: background .4s ease-out
+			&::before
+				content: ''
+				position: absolute
+				top: 2px
+				left: 2px
+				right: 2px
+				bottom: 2px
+				border-radius: 50%
+				border: 6px solid $white
+		&-circle:hover ~ &-details
+				display: block
+				opacity: 1
+				transform: translateY(0)
+		&-circle:hover::after
+			background: $crimson
+		&-circle:hover &-pic::after
+			opacity: 1
+			animation: flipInX 1.2s
 		&-pic
+			position: relative
+			&::after
+				position: relative
+				content: ''
+				display: block
+				z-index: 10
+				opacity: 0
 			&_bench
 				+s('bench')
+				&::after
+					+s('bench_w')
 			&_car-parking
 				+s('car-parking')
+				&::after
+					+s('car-parking_w')
 			&_room
 				+s('room')
+				&::after
+					+s('room_w')
 			&_piggy-bank
 				+s('piggy-bank')
+				&::after
+					+s('piggy-bank_w')
 			&_waterfall
 				+s('waterfall')
+				&::after
+					+s('waterfall_w')
 			&_building
 				+s('building')
+				&::after
+					+s('building_w')
 			&_handshake
 				+s('handshake')
+				&::after
+					+s('handshake_w')
 			&_camera
 				+s('camera')
+				&::after
+					+s('camera_w')
 			&_artificial
 				+s('artificial')
+				&::after
+					+s('artificial_w')
 			&_baby
 				+s('baby')
+				&::after
+					+s('baby_w')
 			&_swing
 				+s('swing')
-		&-descr
+				&::after
+					+s('swing_w')
+		&-title
 			font-size: 18px
 			color: $grey
 			text-align: center
+			cursor: default
 		&-details
-			display: none
-			
+			position: absolute
+			top: 49px
+			left: calc(50% - 160px)
+			z-index: 10
+			width: 320px
+			padding: 65px 20px 20px
+			border-radius: 10px
+			background: $crimson
+			color: $white
+			text-align: center
+			opacity: 0
+			transform: translateY(40%)
+			transition: opacity .35s ease-in-out, transform .35s
+			&-title
+				margin-bottom: 10px
+				+os-b
+				font-size: 18px
+				line-height: 20px
+			&-descr
+				font-size: 14px
+				line-height: 17px
+		
 		&_1
 			top: 4%
 			left: 16%

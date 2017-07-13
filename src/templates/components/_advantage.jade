@@ -6,7 +6,7 @@ if advantage.inTitle ? advantage.inTitle : advantage.inTitle = ['Когда пр
 +b.advantage(class= advantageClass ? advantageClass : '')
 	+e.H2.title.title-decor-sm
 		+e.SPAN= advantage.title
-	+e.in
+	+e.in.js-advantage-popups
 		+e.H3.in-title.title-decor-lg
 			+e.SPAN= advantage.inTitle
 
@@ -14,12 +14,13 @@ if advantage.inTitle ? advantage.inTitle : advantage.inTitle = ['Когда пр
 			+e.item(class='_#{item.posClass}')
 				+e.item-circle
 					+e.item-pic(class='_#{item.pic}')
-				+e.P.item-descr= item.descr
-					if item.brDescr
+				+e.P.item-title= item.title
+					if item.brTitle
 						+e.BR
-						= item.brDescr
-				+e.DIV.item-details
-					+e.P= item.detailsDescr
+						= item.brTitle
+				+e.item-details
+					+e.item-details-title= item.detailsTitle
+					+e.P.item-details-descr Теперь идя за машиной не нужно выходить на улицу. Спускайтесь в паркинг и поднимайтесь в квартиру на лифте за пару минут. Теперь провожать и встречать своих родных можно в домашних тапочках - так уютно и приятно!
 		each item in advantageList
 			+advantageItem(item)
 //end advantage

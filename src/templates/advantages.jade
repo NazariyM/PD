@@ -4,62 +4,73 @@ title: ПД Преимущества
 extends layouts/_layout
 block content
 	//begin main
-	+b.MAIN.main._advantage._has-decor#js-main-scroll
+	+b.DIV.main._has-decor
 
 			//-advantage
 			-
 				var advantageList = [{
-				descr: 'Двор без машин',
+				title: 'Двор без машин',
 				posClass: '1',
-				pic: 'bench'
+				pic: 'bench',
+				detailsTitle: 'Двор без машин'
 				},{
-				descr: 'От квартиры до',
-				brDescr: 'машины - пара минут',
+				title: 'От квартиры до',
+				brTitle: 'машины - пара минут',
 				posClass: '2',
-				pic: 'car-parking'
+				pic: 'car-parking',
+				detailsTitle: 'От квартиры до машины - пара минут'
 				},{
-				descr: 'Квартиры с террасами',
+				title: 'Квартиры с террасами',
 				posClass: '3',
-				pic: 'room'
+				pic: 'room',
+				detailsTitle: 'Квартиры с террасами'
 				},{
-				descr: 'Экономия на',
-				brDescr: 'коммунальных платежах',
+				title: 'Экономия на',
+				brTitle: 'коммунальных платежах',
 				posClass: '4',
-				pic: 'piggy-bank'
+				pic: 'piggy-bank',
+				detailsTitle: 'Экономия на коммунальных платежах'
 				},{
-				descr: 'Рядом набережная',
+				title: 'Рядом набережная',
 				posClass: '5',
-				pic: 'waterfall'
+				pic: 'waterfall',
+				detailsTitle: 'Экономия на коммунальных платежах'
 				},{
-				descr: 'Эстетика как',
-				brDescr: 'образ жизни',
+				title: 'Эстетика как',
+				brTitle: 'образ жизни',
 				posClass: '6',
-				pic: 'building'
+				pic: 'building',
+				detailsTitle: 'Эстетика как образ жизни'
 				},{
-				descr: 'Приятное окружение',
-				brDescr: 'на долгие годы',
+				title: 'Приятное окружение',
+				brTitle: 'на долгие годы',
 				posClass: '7',
-				pic: 'handshake'
+				pic: 'handshake',
+				detailsTitle: 'Приятное окружение на долгие годы'
 				},{
-				descr: 'Система видеонаблюдения',
-				brDescr: 'по всему ЖК',
+				title: 'Система видеонаблюдения',
+				brTitle: 'по всему ЖК',
 				posClass: '8',
-				pic: 'camera'
+				pic: 'camera',
+				detailsTitle: 'Система видеонаблюдения по всему ЖК'
 				},{
-				descr: 'Современные',
-				brDescr: 'инженерные системы',
+				title: 'Современные',
+				brTitle: 'инженерные системы',
 				posClass: '9',
-				pic: 'artificial'
+				pic: 'artificial',
+				detailsTitle: 'Современные инженерные системы'
 				},{
-				descr: 'Беби-клуб, фитнес зал,',
-				brDescr: 'салон красоты',
+				title: 'Беби-клуб, фитнес зал,',
+				brTitle: 'салон красоты',
 				posClass: '10',
-				pic: 'baby'
+				pic: 'baby',
+				detailsTitle: 'Беби-клуб, фитнес зал, салон красоты'
 				},{
-				descr: 'Детская площадка',
-				brDescr: 'с антитравматичным покрытием',
+				title: 'Детская площадка',
+				brTitle: 'с антитравматичным покрытием',
 				posClass: '11',
-				pic: 'swing'
+				pic: 'swing',
+				detailsTitle: 'Детская площадка с антитравматичным покрытием'
 				}];
 			include components/_advantage
 	//end main
