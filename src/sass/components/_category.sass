@@ -80,7 +80,7 @@
 	&_float-bottom,
 	&_float-bottom-mod
 		position: absolute
-		z-index: 10
+		z-index: 100
 	&_float-bottom
 		right: 40px
 		bottom: 60px
@@ -96,5 +96,9 @@
 	&_float-top
 		top: 20px
 		right: 45px
+	&_float-top &__item
+		height: 172px
+		width: 172px
+		border: 0
 	&_float-top &__item::after
 		display: none

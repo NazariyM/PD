@@ -1,17 +1,18 @@
 .advantage
-	padding: 20px 0
+	padding: 30px 0 15px 50px
+	overflow: hidden
 	&__title
-		padding-right: 90px
+		padding-right: 62px
 		span
 			padding: 0 170px
 	&__in
 		position: relative
 		min-height: 850px
-		margin-top: 55px
+		margin-top: 35px
 		&-title
 			position: absolute
 			top: 43.2%
-			left: 27%
+			left: 28%
 			max-width: 610px
 			cursor: default
 	&__item
@@ -58,14 +59,16 @@
 				border-radius: 50%
 				border: 6px solid $white
 		&-circle:hover ~ &-details
-				display: block
-				opacity: 1
+			opacity: 1
+			&_bot
 				transform: translateY(0)
+			&_top
+				transform: translateY(-100%)
 		&-circle:hover::after
 			background: $crimson
 		&-circle:hover &-pic::after
 			opacity: 1
-			animation: flipInX 1.2s
+			animation: flipInX 1s
 		&-pic
 			position: relative
 			&::after
@@ -129,60 +132,118 @@
 			left: calc(50% - 160px)
 			z-index: 10
 			width: 320px
-			padding: 65px 20px 20px
+			padding: 62px 20px 25px
 			border-radius: 10px
 			background: $crimson
 			color: $white
 			text-align: center
 			opacity: 0
-			transform: translateY(40%)
 			transition: opacity .35s ease-in-out, transform .35s
 			&-title
-				margin-bottom: 10px
+				margin-bottom: 13px
 				+os-b
 				font-size: 18px
 				line-height: 20px
 			&-descr
 				font-size: 14px
 				line-height: 17px
-		
+			&_bot
+				transform: translateY(40%)
+			&_top
+				padding: 25px 20px 62px
+				transform: translateY(-60%)
 		&_1
 			top: 4%
-			left: 16%
+			left: 17.5%
 			&::after
-				height: 272px
-				bottom: -180%
-				right: 1%
-				+rotate(131)
+				height: 324px
+				bottom: -204%
+				right: -16%
+				transform: rotate(124deg)
 		&_2
 			top: 1.4%
-			left: 40%
+			left: 41%
+			&::after
+				height: 150px
+				bottom: -104%
+				right: 48%
+		&_2	&-details-title
+			max-width: 230px
+			margin: 0 auto 13px
 		&_3
 			top: 4%
 			left: 64.2%
+			&::after
+				height: 296px
+				bottom: -194%
+				right: 115%
+				transform: rotate(-125deg) translate3d(0, 0, 0)
 		&_4
-			left: 83%
+			left: 80.5%
 			top: 21.3%
+			&::after
+				height: 252px
+				bottom: -61%
+				right: 125%
+				transform: rotate(-117deg) translate3d(0, 0, 0)
 		&_5
 			top: 45%
-			left: 76%
+			left: 75%
+			&::after
+				height: 116px
+				bottom: 22%
+				right: 100%
+				transform: rotate(-83deg) translate3d(0, 0, 0)
 		&_6
 			top: 68%
-			left: 64%
+			left: 62.8%
+			&::after
+				height: 130px
+				bottom: 88%
+				right: 84%
+				transform: rotate(-39deg) translate3d(0, 0, 0)
 		&_7
 			top: 83%
-			left: 49%
+			left: 48.7%
+			&::after
+				height: 190px
+				bottom: 98%
+				right: 71%
+				transform: rotate(-29deg) translate3d(0, 0, 0)
 		&_8
-			top: 83%
-			left: 30%
+			top: 82.6%
+			left: 31.4%
+			&::after
+				height: 190px
+				bottom: 97%
+				right: 22%
+				transform: rotate(29deg) translate3d(0, 0, 0)
 		&_9
 			top: 68%
-			left: 15%
+			left: 17%
+			&::after
+				height: 125px
+				bottom: 88%
+				right: 16%
+				transform: rotate(40deg) translate3d(0, 0, 0)
 		&_10
 			top: 45%
-			left: 5%
+			left: 8%
+			&::after
+				height: 125px
+				bottom: 26%
+				right: -5%
+				transform: rotate(90deg) translate3d(0, 0, 0)
+		&_10	&-details-title
+			max-width: 2151px
+			margin: 0 auto 13px
 		&_11
 			top: 21%
-			left: -1%
-		&_11 &-descr
+			left: 2%
+			&::after
+				height: 248px
+				bottom: -43%
+				right: -29%
+				transform: rotate(115deg) translate3d(0, 0, 0)
+		&_11 &-title
 			max-width: 180px

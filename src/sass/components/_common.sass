@@ -96,7 +96,7 @@ video::-webkit-media-controls-start-playback-button
 	&::before, &::after
 		content: ''
 		position: absolute
-		left: calc(50% - 32px)
+		left: calc(50% - 54px)
 		z-index: 1
 		+s('title-decor-lg')
 	&::after
@@ -121,6 +121,8 @@ video::-webkit-media-controls-start-playback-button
 			border-top-color: #d1ac88
 			border-bottom-color: #d1ac88
 			line-height: 25px
+		&::before, &::after
+			left: calc(50% - 32px)
 		&::before
 			top: -25px
 			transform: none

@@ -18,7 +18,7 @@ if advantage.inTitle ? advantage.inTitle : advantage.inTitle = ['Когда пр
 					if item.brTitle
 						+e.BR
 						= item.brTitle
-				+e.item-details
+				+e.item-details(class='advantage__item-details_#{item.detailsMod}')
 					+e.item-details-title= item.detailsTitle
 					+e.P.item-details-descr Теперь идя за машиной не нужно выходить на улицу. Спускайтесь в паркинг и поднимайтесь в квартиру на лифте за пару минут. Теперь провожать и встречать своих родных можно в домашних тапочках - так уютно и приятно!
 		each item in advantageList
