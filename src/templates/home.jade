@@ -4,15 +4,19 @@ title: ПД Главная
 extends layouts/_layout
 block content
   //begin main
-  +b.MAIN.home.main
-    +e.bg(style='background-image: url(img/bg/home-view_bg.jpg)')
-    +e.side
+  +b.MAIN.main
+    +b.home.js-toggle-bg
+      +e.bg.bg-day(style='background-image: url(img/bg/home-bg_day.jpg)')
+      +e.bg.bg-night(style='background-image: url(img/bg/home-bg_night.jpg)')
+
+      -var categoryClass= '_home';
       include components/_category
+
       //begin time-bar
-      +b.time-bar.home__time-bar
-        +e.BUTTON.btn.is-active(type='button')
+      +b.time-bar._home
+        +e.BUTTON.btn._day.is-active(type='button')
           +icon('icon-sun', 'time-bar__icon')
-        +e.BUTTON.btn(type='button')
+        +e.BUTTON.btn._night(type='button')
           +icon('icon-moon', 'time-bar__icon')
       //end time-bar
   //end main

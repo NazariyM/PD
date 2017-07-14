@@ -6,12 +6,11 @@ html
 
   body(class=bodyClass)
     include ../bemto/bemto
-    .layout(class=layoutClass)
 
-      block header
-        include ../components/_header
+    block header
+      include ../components/_header
 
-      block content
+    block content
 
     //load scripts
     block scripts

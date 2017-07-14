@@ -4,8 +4,8 @@
 	&__item
 		$item: &
 		position: relative
-		height: 180px
 		width: 180px
+		min-height: 180px
 		border-radius: 50%
 		text-align: center
 		+tr(background .3s)
@@ -102,3 +102,9 @@
 		border: 0
 	&_float-top &__item::after
 		display: none
+		
+	&_home
+		padding: 15px 40px 30px
+	&_home &__item
+		&:not(:first-child)
+			margin-top: 25px
