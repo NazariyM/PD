@@ -31,6 +31,7 @@ function initAdvPopups() {
 }
 initAdvPopups();
 
+// toggle background-img
 function toggleBgImg() {
   const $toggleSection = $('.js-toggle-bg');
   const $timeBar = $toggleSection.find('.time-bar');

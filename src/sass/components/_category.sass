@@ -5,6 +5,7 @@
 		$item: &
 		position: relative
 		width: 180px
+		height: 180px
 		min-height: 180px
 		border-radius: 50%
 		text-align: center
@@ -77,6 +78,7 @@
 			transition: opacity 1.5s .1s ease-in-out
 			
 	&_float-top,
+	&_float-top-mod,
 	&_float-bottom,
 	&_float-bottom-mod
 		position: absolute
@@ -89,6 +91,7 @@
 		bottom: 26px
 	&_float-bottom-mod &__item
 		height: 172px
+		min-height: 172px
 		width: 172px
 		border: 4px solid $crimson
 	&_float-bottom-mod &__item::after
@@ -96,9 +99,13 @@
 	&_float-top
 		top: 20px
 		right: 45px
+		&-mod
+			top: 10px
+			right: 25px
 	&_float-top &__item
-		height: 172px
 		width: 172px
+		min-height: 172px
+		height: 172px
 		border: 0
 	&_float-top &__item::after
 		display: none
