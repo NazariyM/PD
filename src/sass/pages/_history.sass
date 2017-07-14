@@ -1,5 +1,5 @@
 .history
-	padding: 60px 30px 15px 40px
+	padding: 60px 20px 15px 40px
 	&__container
 		padding: 0
 	&__title span
@@ -9,13 +9,15 @@
 		color: $grey
 		&-top
 			display: flex
-			margin-bottom: 40px
+			align-items: flex-start
+			margin-bottom: 30px
 		&-title
-			margin-bottom: 23px
+			margin-bottom: 25px
+			padding-right: 190px
 			+f('con', 24)
 		&-img
 			position: relative
-			flex: 0 1 463px
+			flex: 0 1 465px
 			&::before, &::after
 				content: ''
 				position: absolute
@@ -40,6 +42,8 @@
 		&-text
 			flex: 1 1 830px
 			margin-left: 42px
+		&-descr
+			line-height: 22px
 		&-sub-title
-			margin: 20px 0
+			margin: 15px 0
 			+f('con', 16)

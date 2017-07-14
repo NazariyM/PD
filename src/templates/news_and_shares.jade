@@ -4,9 +4,9 @@ title: ПД Новости и акции
 extends layouts/_layout
 block content
 	//begin main
-	+b.MAIN.main._news
+	+b.MAIN.main
 		//begin news-tabs
-		+b.tabs._news.js-tabs
+		+b.SECTION.tabs._news.js-tabs
 			+e.container.container
 				+e.H2.title.title-decor-sm
 					+e.SPAN Новости
@@ -86,7 +86,7 @@ block content
 		//end news-tabs
 
 		//begin shares
-		+b.tabs._shares.js-tabs
+		+b.SECTION.tabs._shares.js-tabs
 			+e.container.container
 				+e.H2.title.title-decor-sm
 					+e.SPAN Акции

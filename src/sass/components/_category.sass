@@ -99,16 +99,23 @@
 	&_float-top
 		top: 20px
 		right: 45px
-		&-mod
-			top: 10px
-			right: 25px
 	&_float-top &__item
 		width: 172px
 		min-height: 172px
 		height: 172px
 		border: 0
-	&_float-top &__item::after
-		display: none
+		&::after
+			display: none
+	&_float-top-mod
+		top: 10px
+		right: 25px
+	&_float-top-mod &__item
+		width: 172px
+		min-height: 172px
+		height: 172px
+		border: 0
+		&::after
+			display: none
 		
 	&_home
 		padding: 15px 40px 30px
