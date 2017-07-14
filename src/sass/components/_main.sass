@@ -1,3 +1,18 @@
+/* ===================================
+	 home
+	 =================================== */
+.home
+	+coverdiv
+	display: flex
+	justify-content: flex-end
+	&__bg
+		+coverdiv
+		+cover
+		background-size: 100% 100%
+		z-index: -1
+		&.bg-night
+			display: none
+
 /* time-bar
 	----------------------------------- */
 .time-bar
@@ -53,6 +68,11 @@
 		position: absolute
 		top: -46px
 		left: calc(50% - 8px)
+		transition: transform .3s ease
+		pointer-events: none
+		will-change: transform
+	.no-touch &:hover::before
+		transform: translateY(8px)
 	&_red
 		color: $crimson
 		&::before

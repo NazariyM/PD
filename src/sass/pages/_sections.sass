@@ -1,12 +1,11 @@
 .section
-	height: 100%
+	display: flex
+	min-height: 100vh
 	+cover
 	&__container
 		display: flex
 		flex-direction: column
 		align-items: center
-		height: 100%
-		text-align: center
 	&__descr
 		font-size: 24px
 		line-height: 36px
@@ -16,7 +15,7 @@
 			padding-bottom: 100px
 			&-white
 				position: relative
-				padding-bottom: 100px
+				padding-bottom: 120px
 				color: $white
 				&::after
 					content: ''
@@ -27,6 +26,7 @@
 					+s('horiz-decor-w')
 			&-red
 				@extend .section__descr_has-decor-white
+				padding-bottom: 160px
 				color: $crimson
 				&::after
 					+s('horiz-decor-red')
@@ -43,64 +43,102 @@
 		&::after
 			background-image: url("../img/bg/bg-pattern.png"), linear-gradient(to top, #e7e7e7 0%, #ffffff 100%) !important
 				
-	&_beauty &__container
-		max-width: 1020px
+	&_beauty
+		padding: 50px 95px 0 0
 	&_beauty &__title
-		margin: 50px 0 235px
+		margin: 0 0 235px
 	&_beauty &__descr
 		max-width: 770px
-		margin: 0 auto 20px
-		color: $white
+		margin: 0 auto 15px
+	&_beauty &__btn
+		margin-bottom: 60px
 		
+	&_safe
+		padding: 65px 40px 0 0
 	&_safe &__container
 		max-width: 1060px
 	&_safe &__title
-		margin: 50px 0 35px
+		margin: 0 auto 25px
+		max-width: 860px
+	&_safe &__title span
+		&::before, &::after
+			top: 40%
 	&_safe &__descr
-		margin-bottom: 235px
+		margin-bottom: 170px
 		color: $crimson
 	&_safe &__btn
-		margin: 0 auto 240px
+		margin: auto
 		
+	&_observ
+		padding: 70px 40px 0 0
 	&_observ &__container
 		max-width: 940px
 	&_observ &__title
-		margin: 80px 0 40px
+		margin-bottom: 35px
+	&_observ &__title span
+		&::before, &::after
+			top: 48%
+		&::before
+			left: 20px
+		&::after
+			right: 20px
 	&_observ &__descr
-		margin-bottom: 235px
+		margin-bottom: 160px
 		color: $crimson
 	&_observ &__btn
-		margin: 0 auto 240px
-		
-	&_closed &__container
-		max-width: 940px
+		margin: auto auto 50px
+	&_closed
+		padding: 70px 30px 0 0
 	&_closed &__title
-		margin: 80px 0 40px
+		margin: 0 0 20px
 	&_closed &__descr
-		margin-bottom: 235px
+		max-width: 900px
+		margin-bottom: 300px
 		color: $crimson
 	&_closed &__btn
-		margin: 0 auto 240px
+		margin: auto
 		
 	&_safe-look
+		padding-left: 30px
 		background-size: auto
 		background-position: right 6px center
 	&_safe-look &__container
 		max-width: 900px
 		justify-content: center
 		margin: 0
+	&_safe-look &__title
+		margin-bottom: 60px
+	&_safe-look &__title span
+		&::before, &::after
+			top: 20%
+		&::before
+			left: 20px
+		&::after
+			right: 20px
 	&_safe-look &__descr
 		max-width: 570px
+		margin-bottom: 20px
 		
 	&_comfort
+		padding-left: 25px
 		background-size: auto
 		background-position: right center
 	&_comfort &__container
 		max-width: 900px
 		justify-content: center
 		margin: 0
+	&_comfort &__title
+		margin: 0 0 60px
+	&_comfort &__title span
+		&::before, &::after
+			top: 20%
+		&::before
+			left: 50px
+		&::after
+			right: 50px
 	&_comfort &__descr
 		max-width: 620px
+		margin-bottom: 30px
 
 .section-decorated
 	position: relative
@@ -109,18 +147,3 @@
 		+coverdiv
 		z-index: -1
 		background-image: url("../img/bg/bg-pattern.png")
-		
-/* ===================================
-	 home
-	 =================================== */
-.home
-	+coverdiv
-	display: flex
-	justify-content: flex-end
-	&__bg
-		+coverdiv
-		+cover
-		background-size: 100% 100%
-		z-index: -1
-		&.bg-night
-			display: none
