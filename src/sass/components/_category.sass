@@ -78,7 +78,6 @@
 			transition: opacity 1.5s .1s ease-in-out
 			
 	&_float-top,
-	&_float-top-mod,
 	&_float-bottom,
 	&_float-bottom-mod
 		position: absolute
@@ -97,19 +96,9 @@
 	&_float-bottom-mod &__item::after
 		display: none
 	&_float-top
-		top: 20px
-		right: 45px
-	&_float-top &__item
-		width: 172px
-		min-height: 172px
-		height: 172px
-		border: 0
-		&::after
-			display: none
-	&_float-top-mod
 		top: 10px
 		right: 25px
-	&_float-top-mod &__item
+	&_float-top &__item
 		width: 172px
 		min-height: 172px
 		height: 172px

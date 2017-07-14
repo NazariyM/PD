@@ -1,17 +1,18 @@
 .about
-	&__container
-		padding: 0
 	&__title
 		margin-bottom: 55px
 	&__descr
-		margin-bottom: 40px
+		margin-bottom: 30px
 		&-item
 			line-height: 24px
 			&:not(:first-child)
 				margin-top: 24px
 				
 	&__slider
+		display: none
 		margin: 0 auto
+		&.slick-initialized
+			display: block
 		&-item
 		
 		.slick-arrow
@@ -48,7 +49,20 @@
 			height: 198px
 			margin: 0 10px
 	
-	&_default &__title span
+	&_developer
+		padding: 110px 20px 15px 40px
+	&_developer &__title
+		margin-bottom: 60px
+	&_developer &__title span
 		padding: 0 164px
-	&_default &__descr
-		margin-bottom: 70px
+	&_developer &__descr-item
+		&:not(:first-child)
+			margin-top: 15px
+		
+	&_concept
+		padding: 110px 20px 15px 40px
+	&_concept &__descr
+		margin-bottom: 20px
+	&_concept &__descr-item
+		&:not(:first-child)
+			margin-top: 10px
