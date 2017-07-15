@@ -1,0 +1,47 @@
+---
+title: План квартир
+---
+extends layouts/_layout
+block content
+	//begin main
+	+b.MAIN.main._has-decor
+		//begin plan
+		+b.plan
+			+e.H2.title.title-decor-xl._red
+				+e.SPAN План квартир
+			+e.block
+				+b.plan-view
+					+e.top
+						+e.options.js-plan-view-options
+							+e.BUTTON.options-btn(type='button')
+								+e.SPAN Без
+									+e.BR
+									| мебели
+							+e.BUTTON.options-btn.is-active(type='button')
+								+e.SPAN С мебелью
+							+e.BUTTON.options-btn._bold(type='button')
+								+e.SPAN 3D
+
+						+e.actions
+							+e.A.actions-link._download(href='#!') Скачать
+							+e.A.actions-link._print(href='#!') На печать
+							+e.A.actions-link._star(href='#!') В избранное
+
+					+e.picture
+						+b.IMG.obj-fit(src='img/plans/flat-14_furniture.jpg')
+
+					+b.request-form
+						+e.FORM(action='#!')
+							+e.title Оставить заявку
+							+e.row
+								+e.field
+									+b.INPUT.input(type='text' placeholder='Ваше имя' name='')
+								+e.field
+									+b.INPUT.input(type='tel' placeholder='Телефон' name='')
+								+e.field
+									+e.BUTTON.btn.btn._red(type='submit') Свяжитесь со мной
+
+				+e.block-data
+
+		//end plan
+	//end main

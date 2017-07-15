@@ -1,0 +1,85 @@
+.plan
+	&__block
+		position: relative
+		padding: 45px 30px 15px
+		background: $white
+		border-radius: 10px
+		border: 1px solid #d3c17f
+		&::after, &::before
+			content: ''
+			position: absolute
+			top: calc(50% - 155px)
+			+s('vert-decor_sm')
+		&::before
+			left: 0
+		&::after
+			right: 0
+			+rotate(180)
+			
+/* plan-view
+	----------------------------------- */
+.plan-view
+	&__top
+		display: flex
+		align-items: center
+		margin-bottom: 50px
+	&__options
+		display: flex
+		margin-right: 50px
+		&-btn
+			position: relative
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 102px
+			height: 102px
+			border-radius: 50%
+			overflow: hidden
+			color: $crimson
+			text-align: center
+			+os-r
+			font-size: 17px
+			line-height: 22px
+			background: url("../img/bg/cat-img_3.jpg") no-repeat 50% 50%/cover
+			&::after
+				content: ''
+				+coverdiv
+				z-index: 1
+				background: rgba($beige, .9)
+			&_bold
+				+os-b
+				font-size: 20px
+				text-transform: uppercase
+			&:not(:first-child)
+				margin-left: 20px
+			&.is-active
+				color: $white
+				&::after
+					background: rgba($crimson, .9)
+			span
+				z-index: 2
+				
+	&__actions
+		display: flex
+		flex-direction: column
+		&-link
+			position: relative
+			padding-left: 30px
+			font-size: 18px
+			color: $grey
+			&::after
+				content: ''
+				position: absolute
+				top: 3px
+				left: 0
+			&_download::after
+				+s('download')
+			&_print::after
+				+s('printer')
+			&_star::after
+				+s('star')
+			&:not(:first-child)
+				margin-top: 3px
+			+hover
+				color: $crimson
+				text-decoration: underline
