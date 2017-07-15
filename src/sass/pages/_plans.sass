@@ -82,28 +82,31 @@
 		flex-direction: column
 		&-link
 			position: relative
-			padding-left: 30px
 			font-size: 18px
 			color: $grey
-			&::after
+			&::before
 				content: ''
-				position: absolute
-				top: 3px
-				left: 0
-			&_download::after
+				display: inline-block
+				vertical-align: middle
+			&_download::before
 				+s('download')
-			&_print::after
+			&_print::before
 				+s('printer')
-			&_star::after
+			&_star::before
 				+s('star')
 			&:not(:first-child)
 				margin-top: 6px
-			+hover
+			.no-touch &:hover span
 				color: $crimson
 				text-decoration: underline
+			span
+				display: inline-block
+				vertical-align: middle
+				margin-left: 15px
 				
 	&__picture
-		min-height: 473px
+		min-height: 475px
+		
 /* request-form
 	----------------------------------- */
 .request-form
@@ -151,12 +154,12 @@
 		&::after
 			content: ''
 			position: absolute
-			top: 0
+			top: calc(50% - 13px)
 			right: 0
 			+s('double-arrs')
 			
 	&__text
-		margin-bottom: 60px
+		margin-bottom: 40px
 	&__list
 		&-item
 			&:not(:first-child)

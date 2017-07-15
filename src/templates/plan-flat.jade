@@ -1,5 +1,5 @@
 ---
-title: План квартир
+title: Выбор квартиры/планировки
 ---
 extends layouts/_layout
 block content
@@ -9,35 +9,12 @@ block content
 		//begin plan
 		+b.plan._default
 			+e.H2.title.title-decor-xl._small-red
-				+e.SPAN План квартир
+				+e.SPAN Выбор квартиры/планировки
 			+e.container.container
 				+e.block
-					+b.plan-view.plan__block-view.js-tabs
-						+e.top
-							+e.options.js-tabs-nav
-								+e.BUTTON.options-btn(type='button')
-									+e.SPAN Без
-										+e.BR
-										| мебели
-								+e.BUTTON.options-btn.is-active(type='button')
-									+e.SPAN С мебелью
-								+e.BUTTON.options-btn._bold(type='button')
-									+e.SPAN 3D
-
-							+e.actions
-								+e.A.actions-link._download(href='#!')
-									+e.SPAN Скачать
-								+e.A.actions-link._print(href='#!')
-									+e.SPAN На печать
-								+e.A.actions-link._star(href='#!')
-									+e.SPAN В избранное
-
-						+e.picture.js-tabs-content
-							+e.picture-item
-								+b.IMG.obj-fit(src='img/plans/sect-1_flat-14.jpg')
-							+e.picture-item
-								+b.IMG.obj-fit(src='img/plans/sect-1_flat-14_furniture.jpg')
-							+e.picture-item
+					+b.plan-view.plan__block-view
+						+e.picture
+							+e.IMG(src='img/plans/1-sect_2-floor.jpg')
 
 						+b.request-form._plan
 							+e.FORM(action='#!')

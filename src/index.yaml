@@ -54,3 +54,6 @@ PageList:
 
 - file: plan.html
   ready: 100
+
+- file: plan-flat.html
+  ready: 100
