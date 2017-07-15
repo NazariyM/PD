@@ -1,36 +1,107 @@
 .plan
 	&__container
+		position: relative
 		max-width: 1374px
 		margin: 0 auto
 		padding: 0 30px
-	&__title
-		margin-bottom: 25px
-	&__block
-		display: flex
-		position: relative
-		padding: 45px 30px 15px
-		background: $white
-		border-radius: 10px
-		border: 1px solid #d3c17f
 		&::after, &::before
 			content: ''
 			position: absolute
 			top: calc(50% - 155px)
 			+s('vert-decor_sm')
 		&::before
-			left: -26px
+			left: 4px
 		&::after
-			right: -26px
+			right: 4px
 			+rotate(180)
-			
+	&__title
+		margin-bottom: 25px
+	&__block
+		display: flex
+		overflow: hidden
+		padding: 45px 30px 15px
+		background: $white
+		border-radius: 10px
+		border: 1px solid #d3c17f
+		
 		&-view
+			position: relative
 			flex: 1 1 auto
 			padding-right: 85px
 		&-data
 			flex: 0 0 380px
+			padding: 23px 0 0
+		&_has-compass::before
+			content: ''
+			position: absolute
+			top: 25px
+			left: 10px
+			+s('compass')
+			
+	&__street
+		pointer-events: none
+		position: absolute
+		color: $crimson
+		font-size: 30px
+		+os-r
+		text-align: center
+		span
+			position: relative
+			display: inline-block
+			vertical-align: middle
+		&_1
+			top: -40px
+			left: 0
+			right: 0
+		&_2
+			top: -100px
+			left: 0
+			right: 0
+			bottom: 0
+			+rotate(-90)
+		&-text
+			&_has-label::before
+				margin-right: 70px
+				content: ''
+				display: inline-block
+				vertical-align: middle
+				+rotate(90)
+				+s('plan-str-label')
+				
+	&__look
+		display: none
+		&.slick-initialized
+			display: block
+		&-btn
+			position: absolute
+			right: -65%
+			font-size: 0
+			&_prev
+				top: 0
+				+rotate(-90)
+			&_next
+				top: 100px
+				+rotate(90)
+			&-icon
+				fill: $crimson
+				font-size: 24px
+		&-btn.slick-disabled &-btn-icon
+			fill: rgba($crimson, .3)
 	
 	&_default
 		padding: 20px 0 0
+		
+	&_flat
+		padding: 20px 0
+	&_flat &__block
+		position: relative
+		padding: 50px 30px 0 30px
+	&_flat &__block-data
+		padding: 80px 0 0
+	&_flat &__block-view
+		flex: 1 1 auto
+		min-width: 1px
+		padding: 0 85px 0 110px
 
 /* plan-view
 	----------------------------------- */
@@ -106,7 +177,7 @@
 				
 	&__picture
 		min-height: 475px
-		
+	
 /* request-form
 	----------------------------------- */
 .request-form
@@ -138,7 +209,7 @@
 	----------------------------------- */
 .plan-data
 	&__title
-		padding: 23px 0 80px
+		margin-bottom: 80px
 		+os-b
 		font-size: 39px
 		text-transform: uppercase

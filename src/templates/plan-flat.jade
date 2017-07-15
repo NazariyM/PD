@@ -7,24 +7,28 @@ block content
 	+b.DIV.main._has-decor
 
 		//begin plan
-		+b.plan._default
+		+b.plan._flat
 			+e.H2.title.title-decor-xl._small-red
 				+e.SPAN Выбор квартиры/планировки
 			+e.container.container
-				+e.block
-					+b.plan-view.plan__block-view
-						+e.picture
-							+e.IMG(src='img/plans/1-sect_2-floor.jpg')
+				+e.block._has-compass
 
-						+b.request-form._plan
-							+e.FORM(action='#!')
-								+e.title Оставить заявку
-								+e.row
-									+e.field
-										+e.INPUT.input.input(type='text' placeholder='Ваше имя' name='')
-									+e.field
-										+e.INPUT.input.input(type='tel' placeholder='Телефон' name='')
-									+e.BUTTON.btn.btn._red(type='submit') Свяжитесь со мной
+					.plan__block-view
+						+e.street._1
+							+e.SPAN.street-text Ул. Комсомольская
+						+e.street._2
+							+e.SPAN.street-text._has-label Ул. Водников
+						+e.status
+							+e.SPAN.status-count.js-status
+							+e.SPAN.status-text этаж
+
+						+e.look.js-plan-look
+							+e.look-pic
+								+e.IMG(src='img/plans/1-sect_2-floor.jpg')
+							+e.look-pic
+								+e.IMG(src='img/plans/1-sect_2-floor.jpg')
+							+e.look-pic
+								+e.IMG(src='img/plans/1-sect_2-floor.jpg')
 
 					+b.plan-data.plan__block-data
 						+e.H3.title 1 секция
