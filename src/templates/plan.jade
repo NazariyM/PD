@@ -4,44 +4,83 @@ title: План квартир
 extends layouts/_layout
 block content
 	//begin main
-	+b.MAIN.main._has-decor
+	+b.DIV.main._has-decor
+
 		//begin plan
-		+b.plan
-			+e.H2.title.title-decor-xl._red
+		+b.plan._default
+			+e.H2.title.title-decor-xl._small-red
 				+e.SPAN План квартир
-			+e.block
-				+b.plan-view
-					+e.top
-						+e.options.js-plan-view-options
-							+e.BUTTON.options-btn(type='button')
-								+e.SPAN Без
-									+e.BR
-									| мебели
-							+e.BUTTON.options-btn.is-active(type='button')
-								+e.SPAN С мебелью
-							+e.BUTTON.options-btn._bold(type='button')
-								+e.SPAN 3D
+			+e.container.container
+				+e.block
+					+b.plan-view.plan__block-view.js-tabs
+						+e.top
+							+e.options.js-tabs-nav
+								+e.BUTTON.options-btn(type='button')
+									+e.SPAN Без
+										+e.BR
+										| мебели
+								+e.BUTTON.options-btn.is-active(type='button')
+									+e.SPAN С мебелью
+								+e.BUTTON.options-btn._bold(type='button')
+									+e.SPAN 3D
 
-						+e.actions
-							+e.A.actions-link._download(href='#!') Скачать
-							+e.A.actions-link._print(href='#!') На печать
-							+e.A.actions-link._star(href='#!') В избранное
+							+e.actions
+								+e.A.actions-link._download(href='#!') Скачать
+								+e.A.actions-link._print(href='#!') На печать
+								+e.A.actions-link._star(href='#!') В избранное
 
-					+e.picture
-						+b.IMG.obj-fit(src='img/plans/flat-14_furniture.jpg')
+						+e.picture.js-tabs-content
+							+e.picture-item
+								+b.IMG.obj-fit(src='img/plans/flat-14.jpg')
+							+e.picture-item
+								+b.IMG.obj-fit(src='img/plans/flat-14_furniture.jpg')
+							+e.picture-item
 
-					+b.request-form
-						+e.FORM(action='#!')
-							+e.title Оставить заявку
-							+e.row
-								+e.field
-									+b.INPUT.input(type='text' placeholder='Ваше имя' name='')
-								+e.field
-									+b.INPUT.input(type='tel' placeholder='Телефон' name='')
-								+e.field
+						+b.request-form._plan
+							+e.FORM(action='#!')
+								+e.title Оставить заявку
+								+e.row
+									+e.field
+										+e.INPUT.input.input(type='text' placeholder='Ваше имя' name='')
+									+e.field
+										+e.INPUT.input.input(type='tel' placeholder='Телефон' name='')
 									+e.BUTTON.btn.btn._red(type='submit') Свяжитесь со мной
 
-				+e.block-data
+					+b.plan-data.plan__block-data
+						+e.H3.title 1 секция
+						+e.text
+							+e.H5.sub-title Подбор по параметрам
+							+e.UL.list
+								+e.LI.list-item
+									+e.SPAN.list-text Номер квартиры:
+									= ' '
+									+e.SPAN.list-definition 1
+								+e.LI.list-item
+									+e.SPAN.list-text Кол-во комнат:
+									= ' '
+									+e.SPAN.list-definition 1
+								+e.LI.list-item
+									+e.SPAN.list-text Общая площадь, м
+										+e.SUP 2
+										| :&nbsp;
+									+e.SPAN.list-definition 49,76
+								+e.LI.list-item
+									+e.SPAN.list-text Высота потолков, м:
+									= ' '
+									+e.SPAN.list-definition 3
+								+e.LI.list-item
+									+e.SPAN.list-text Ввод в эксплуатацию:
+									= ' '
+									+e.SPAN.list-definition 3 квартал 2018
+								+e.LI.list-item
+									+e.SPAN.list-text Стоимость, руб.:
+									= ' '
+									+e.SPAN.list-definition 4 000 000
+
+						+e.general
+							+e.general-title ГЕН. ПЛАН
+							+e.general-pic
+								+e.IMG(src='img/plans/gen-plan.png')
 
 		//end plan
 	//end main

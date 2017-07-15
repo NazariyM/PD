@@ -17,3 +17,5 @@ $aboutConceptSlider.slick($.extend({}, aboutSldDefaults, {
 $aboutSlider.slick($.extend({}, aboutSldDefaults, {
   slidesToShow: 4
 }));
+
+

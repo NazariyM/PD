@@ -50,17 +50,13 @@
     </header>
     <!--end header-->
     <!--begin main-->
-    <main class="main main_has-decor" role="main">
+    <div class="main main_has-decor">
       <!--begin news-tabs-->
       <section class="tabs tabs_news js-tabs">
         <div class="tabs__container container">
           <h2 class="tabs__title title-decor-sm"><span>Новости</span></h2>
-          <ul class="tabs__nav">
-            <li class="tabs__nav-item">Пресса о нас</li>
-            <li class="tabs__nav-item">Интервью</li>
-            <li class="tabs__nav-item">Наша жизнь</li>
-          </ul>
-          <div class="tabs__content">
+          <div class="tabs__nav js-tabs-nav"><button type="button" class="tabs__nav-item is-active">Пресса о нас</button><button type="button" class="tabs__nav-item">Интервью</button><button type="button" class="tabs__nav-item">Наша жизнь</button></div>
+          <div class="tabs__content js-tabs-content">
             <div class="tabs__content-item">
               <article class="tabs__article">
                 <div class="tabs__article-img-wrap"><img src="img/content/news-1.jpg" class="obj-fit" alt="" role="presentation" /></div>
@@ -180,7 +176,7 @@
           <div style="background-image: url(&quot;img/bg/cat-img_3.jpg&quot;)" class="category__item-img category__item-img_loupe"></div><span class="category__item-text">Поиск<br/>квартиры</span></a>
       </div>
       <!--end category-->
-    </main>
+    </div>
     <!--end main-->
     <!--load scripts-->
     <script type="text/javascript" src="js/app.js"></script>

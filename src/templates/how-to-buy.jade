@@ -4,17 +4,17 @@ title: ПД Как купить
 extends layouts/_layout
 block content
 	//begin main
-	+b.MAIN.main._has-decor
+	+b.DIV.main._has-decor
 		//begin tabs
 		+b.SECTION.tabs._how-buy.js-tabs
 			+e.container.container
 				+e.H2.title.title-decor-sm
 					+e.SPAN Как купить
-				+e.UL.nav
-					+e.LI.nav-item Ипотека
-					+e.LI.nav-item Рассрочка
-					+e.LI.nav-item 100% оплата
-				+e.content
+				+e.nav.js-tabs-nav
+					+e.BUTTON.nav-item.is-active(type='button') Ипотека
+					+e.BUTTON.nav-item(type='button') Рассрочка
+					+e.BUTTON.nav-item(type='button') 100% оплата
+				+e.content.js-tabs-content
 					+e.content-item
 						+e.H5.content-title Покупка квартиры в ипотеку
 						+e.P.content-descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

@@ -50,17 +50,13 @@
     </header>
     <!--end header-->
     <!--begin main-->
-    <main class="main main_has-decor" role="main">
+    <div class="main main_has-decor">
       <!--begin tabs-->
       <section class="tabs tabs_how-buy js-tabs">
         <div class="tabs__container container">
           <h2 class="tabs__title title-decor-sm"><span>Как купить</span></h2>
-          <ul class="tabs__nav">
-            <li class="tabs__nav-item">Ипотека</li>
-            <li class="tabs__nav-item">Рассрочка</li>
-            <li class="tabs__nav-item">100% оплата</li>
-          </ul>
-          <div class="tabs__content">
+          <div class="tabs__nav js-tabs-nav"><button type="button" class="tabs__nav-item is-active">Ипотека</button><button type="button" class="tabs__nav-item">Рассрочка</button><button type="button" class="tabs__nav-item">100% оплата</button></div>
+          <div class="tabs__content js-tabs-content">
             <div class="tabs__content-item">
               <h5 class="tabs__content-title">Покупка квартиры в ипотеку</h5>
               <p class="tabs__content-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
@@ -102,7 +98,7 @@
           <div style="background-image: url(&quot;img/bg/cat-img_3.jpg&quot;)" class="category__item-img category__item-img_loupe"></div><span class="category__item-text">Поиск<br/>квартиры</span></a>
       </div>
       <!--end category-->
-    </main>
+    </div>
     <!--end main-->
     <!--load scripts-->
     <script type="text/javascript" src="js/app.js"></script>

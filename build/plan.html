@@ -50,34 +50,55 @@
     </header>
     <!--end header-->
     <!--begin main-->
-    <main class="main main_has-decor" role="main">
+    <div class="main main_has-decor">
       <!--begin plan-->
-      <div class="plan">
-        <h2 class="plan__title title-decor-xl title-decor-xl_red"><span>План квартир</span></h2>
-        <div class="plan__block">
-          <div class="plan-view">
-            <div class="plan-view__top">
-              <div class="plan-view__options js-plan-view-options"><button type="button" class="plan-view__options-btn"><span>Без<br/>мебели</span></button><button type="button" class="plan-view__options-btn is-active"><span>С мебелью</span></button><button type="button" class="plan-view__options-btn plan-view__options-btn_bold"><span>3D</span></button></div>
-              <div
-                class="plan-view__actions"><a href="#!" class="plan-view__actions-link plan-view__actions-link_download">Скачать</a><a href="#!" class="plan-view__actions-link plan-view__actions-link_print">На печать</a><a href="#!" class="plan-view__actions-link plan-view__actions-link_star">В избранное</a></div>
+      <div class="plan plan_default">
+        <h2 class="plan__title title-decor-xl title-decor-xl_small-red"><span>План квартир</span></h2>
+        <div class="plan__container container">
+          <div class="plan__block">
+            <div class="plan-view plan__block-view js-tabs">
+              <div class="plan-view__top">
+                <div class="plan-view__options js-tabs-nav"><button type="button" class="plan-view__options-btn"><span>Без<br/>мебели</span></button><button type="button" class="plan-view__options-btn is-active"><span>С мебелью</span></button><button type="button" class="plan-view__options-btn plan-view__options-btn_bold"><span>3D</span></button></div>
+                <div
+                  class="plan-view__actions"><a href="#!" class="plan-view__actions-link plan-view__actions-link_download">Скачать</a><a href="#!" class="plan-view__actions-link plan-view__actions-link_print">На печать</a><a href="#!" class="plan-view__actions-link plan-view__actions-link_star">В избранное</a></div>
+            </div>
+            <div class="plan-view__picture js-tabs-content">
+              <div class="plan-view__picture-item"><img src="img/plans/flat-14.jpg" class="obj-fit" alt="" role="presentation" /></div>
+              <div class="plan-view__picture-item"><img src="img/plans/flat-14_furniture.jpg" class="obj-fit" alt="" role="presentation" /></div>
+              <div class="plan-view__picture-item"></div>
+            </div>
+            <div class="request-form request-form_plan">
+              <form action="#!">
+                <div class="request-form__title">Оставить заявку</div>
+                <div class="request-form__row">
+                  <div class="request-form__field"><input type="text" placeholder="Ваше имя" name="" class="request-form__input input" /></div>
+                  <div class="request-form__field"><input type="tel" placeholder="Телефон" name="" class="request-form__input input" /></div><button type="submit" class="request-form__btn btn btn_red">Свяжитесь со мной</button></div>
+              </form>
+            </div>
           </div>
-          <div class="plan-view__picture"><img src="img/plans/flat-14_furniture.jpg" class="obj-fit" alt="" role="presentation" /></div>
-          <div class="request-form">
-            <form action="#!">
-              <div class="request-form__title">Оставить заявку</div>
-              <div class="request-form__row">
-                <div class="request-form__field"><input type="text" placeholder="Ваше имя" name="" class="input" /></div>
-                <div class="request-form__field"><input type="tel" placeholder="Телефон" name="" class="input" /></div>
-                <div class="request-form__field"><button type="submit" class="request-form__btn btn btn_red">Свяжитесь со мной</button></div>
-              </div>
-            </form>
+          <div class="plan-data plan__block-data">
+            <h3 class="plan-data__title">1 секция</h3>
+            <div class="plan-data__text">
+              <h5 class="plan-data__sub-title">Подбор по параметрам</h5>
+              <ul class="plan-data__list">
+                <li class="plan-data__list-item"><span class="plan-data__list-text">Номер квартиры:</span> <span class="plan-data__list-definition">1</span></li>
+                <li class="plan-data__list-item"><span class="plan-data__list-text">Кол-во комнат:</span> <span class="plan-data__list-definition">1</span></li>
+                <li class="plan-data__list-item"><span class="plan-data__list-text">Общая площадь, м<sup>2</sup>:&nbsp;</span><span class="plan-data__list-definition">49,76</span></li>
+                <li class="plan-data__list-item"><span class="plan-data__list-text">Высота потолков, м:</span> <span class="plan-data__list-definition">3</span></li>
+                <li class="plan-data__list-item"><span class="plan-data__list-text">Ввод в эксплуатацию:</span> <span class="plan-data__list-definition">3 квартал 2018</span></li>
+                <li class="plan-data__list-item"><span class="plan-data__list-text">Стоимость, руб.:</span> <span class="plan-data__list-definition">4 000 000</span></li>
+              </ul>
+            </div>
+            <div class="plan-data__general">
+              <div class="plan-data__general-title">ГЕН. ПЛАН</div>
+              <div class="plan-data__general-pic"><img src="img/plans/gen-plan.png" alt="" role="presentation" /></div>
+            </div>
           </div>
         </div>
-        <div class="plan__block-data"></div>
       </div>
-      </div>
-      <!--end plan-->
-    </main>
+    </div>
+    <!--end plan-->
+    </div>
     <!--end main-->
     <!--load scripts-->
     <script type="text/javascript" src="js/app.js"></script>

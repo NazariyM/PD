@@ -4,17 +4,17 @@ title: ПД Новости и акции
 extends layouts/_layout
 block content
 	//begin main
-	+b.MAIN.main._has-decor
+	+b.DIV.main._has-decor
 		//begin news-tabs
 		+b.SECTION.tabs._news.js-tabs
 			+e.container.container
 				+e.H2.title.title-decor-sm
 					+e.SPAN Новости
-				+e.UL.nav
-					+e.LI.nav-item Пресса о нас
-					+e.LI.nav-item Интервью
-					+e.LI.nav-item Наша жизнь
-				+e.content
+				+e.nav.js-tabs-nav
+					+e.BUTTON.nav-item.is-active(type='button') Пресса о нас
+					+e.BUTTON.nav-item(type='button') Интервью
+					+e.BUTTON.nav-item(type='button') Наша жизнь
+				+e.content.js-tabs-content
 					+e.content-item
 						+e.ARTICLE.article
 							+e.article-img-wrap

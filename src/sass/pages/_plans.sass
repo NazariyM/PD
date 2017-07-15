@@ -1,5 +1,12 @@
 .plan
+	&__container
+		max-width: 1374px
+		margin: 0 auto
+		padding: 0 30px
+	&__title
+		margin-bottom: 25px
 	&__block
+		display: flex
 		position: relative
 		padding: 45px 30px 15px
 		background: $white
@@ -11,21 +18,30 @@
 			top: calc(50% - 155px)
 			+s('vert-decor_sm')
 		&::before
-			left: 0
+			left: -26px
 		&::after
-			right: 0
+			right: -26px
 			+rotate(180)
 			
+		&-view
+			flex: 1 1 auto
+			padding-right: 85px
+		&-data
+			flex: 0 0 380px
+	
+	&_default
+		padding: 20px 0 0
+
 /* plan-view
 	----------------------------------- */
 .plan-view
 	&__top
 		display: flex
 		align-items: center
-		margin-bottom: 50px
+		margin-bottom: 30px
 	&__options
 		display: flex
-		margin-right: 50px
+		margin-right: 60px
 		&-btn
 			position: relative
 			display: flex
@@ -41,11 +57,13 @@
 			font-size: 17px
 			line-height: 22px
 			background: url("../img/bg/cat-img_3.jpg") no-repeat 50% 50%/cover
+			transition: color .5s ease
 			&::after
 				content: ''
 				+coverdiv
 				z-index: 1
 				background: rgba($beige, .9)
+				transition: background .5s ease
 			&_bold
 				+os-b
 				font-size: 20px
@@ -79,7 +97,85 @@
 			&_star::after
 				+s('star')
 			&:not(:first-child)
-				margin-top: 3px
+				margin-top: 6px
 			+hover
 				color: $crimson
 				text-decoration: underline
+				
+	&__picture
+		min-height: 473px
+/* request-form
+	----------------------------------- */
+.request-form
+	padding: 25px 28px 40px
+	border-radius: 10px
+	background-color: #e7d3a9
+	&__title
+		margin-bottom: 20px
+		+f('con', 23)
+		color: $crimson
+		text-align: center
+	&__row
+		display: flex
+	&__field
+		flex: 1 1 252px
+		margin-right: 9px
+	&__input
+		border: 1px solid #dcdcdc
+	&__btn
+		padding: 0 22px
+		height: 42px
+		line-height: 42px
+		
+	&_plan
+		margin-top: 30px
+		margin-left: -12px
+	
+/* plan-data
+	----------------------------------- */
+.plan-data
+	&__title
+		padding: 23px 0 80px
+		+os-b
+		font-size: 39px
+		text-transform: uppercase
+		color: $crimson
+	&__sub-title
+		display: inline-block
+		margin-bottom: 45px
+		position: relative
+		padding-right: 50px
+		color: $grey
+		+os-b
+		font-size: 24px
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			+s('double-arrs')
+			
+	&__text
+		margin-bottom: 60px
+	&__list
+		&-item
+			&:not(:first-child)
+				margin-top: 17px
+		&-text
+			+os-r
+		&-definition
+			+os-b
+			color: $crimson
+		span
+			display: inline-block
+			vertical-align: middle
+			line-height: 28px
+			font-size: 24px
+			
+	&__general
+		&-title
+			text-transform: uppercase
+			font-size: 24px
+			color: $crimson
+			+os-b
+		&-pic
