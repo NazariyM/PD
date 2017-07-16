@@ -1,0 +1,100 @@
+.commercial
+	padding: 20px 15px 0
+	&__container
+		max-width: 1374px
+		padding: 0 30px
+	&__title
+		margin-bottom: 30px
+
+/* stat-block
+	----------------------------------- */
+.stat-block
+	padding: 28px 65px 28px 28px
+	background: $white
+	border-radius: 10px
+	border: 1px solid #d3c17f
+	&__info
+		display: flex
+		&-descr
+			flex: 0 1 850px
+			padding-right: 30px
+			color: $grey
+			+os-r
+			font-size: 18px
+	&__places
+		display: flex
+		flex: 1 0 340px
+		&-item
+			+os-b
+			text-align: center
+			&:not(:first-child)
+				margin-left: 40px
+		&-count
+			font-size: 88px
+			line-height: 1
+			&_all
+				color: $crimson
+			&_free
+				color: #d3c17f
+		&-text
+			font-size: 24px
+			color: $grey
+			
+	&__table
+		height: 680px
+		border: 1px solid $crimson
+		sup
+			font-size: 10px
+			line-height: 1
+			vertical-align: super
+		&-row
+			position: relative
+			display: flex
+			justify-content: space-between
+			align-items: center
+			cursor: pointer
+			background: rgba(#f0d4aa, .4)
+			transition: background .3s ease
+			&.is-open
+				background: #fce4c9
+			+hover
+				background: $beige
+			&_hidden
+				display: none
+				cursor: default
+				background: $white
+		&-cell
+			flex: 1 1 25%
+			padding: 12px
+			text-align: center
+			border-bottom: 1px solid $white
+			&:nth-child(4)
+				padding-right: 60px
+		&-head
+			display: flex
+			justify-content: space-between
+			align-items: center
+			padding: 14px 0
+			background: $crimson
+			color: $white
+			+os-b
+			font-size: 18px
+		&-head &-row
+			cursor: default
+		&-head &-cell
+			flex: 1 1 25%
+			border-bottom: 0
+			padding: 0 10px
+			&:nth-child(4)
+				padding-right: 60px
+		&-body
+			+os-r
+			font-size: 24px
+			color: $grey
+		&-arr
+			position: absolute
+			top: calc(50% - 10px)
+			right: 25px
+			fill: $crimson
+			+rotate(90)
+			font-size: 22px

@@ -57,3 +57,6 @@ PageList:
 
 - file: plan-flat.html
   ready: 100
+
+- file: commercial-property.html
+  ready: 100

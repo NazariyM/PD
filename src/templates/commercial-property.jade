@@ -1,0 +1,53 @@
+---
+title: Коммерческая недвижимость
+---
+extends layouts/_layout
+block content
+	//begin main
+	+b.DIV.main._has-decor
+
+		//begin commercial
+		+b.SECTION.commercial
+			+e.H2.title.title-decor-xl._small-red
+				+e.SPAN Коммерческая недвижимость
+			+e.container.container._has-decor
+				+b.stat-block._commercial
+					+e.info
+						+e.P.info-descr Спешите приобрести коммерческие площади в центральном районе по выгодным ценам. Помещения находятся на первой линии домов жилого квартала. Предлагается большое разнообразие вариантов, в том числе с высокими потолками и витражным остеклением. Узнайте о текущих акциях и рассрочках.
+						+e.places
+							+e.places-item
+								+e.places-count._all 9
+								+e.places-text всего
+							+e.places-item
+								+e.places-count._free 6
+								+e.places-text свободно
+
+					+e.table.js-stat-block-scroll
+						+e.table-head
+							+e.table-cell Секция
+							+e.table-cell Проектный номер
+							+e.table-cell Площадь, м
+								+e.SUP 2
+							+e.table-cell Цена, руб.
+						+e.table-body.js-stat-table-accordion
+							+e.table-row
+								+e.table-cell 1
+								+e.table-cell 8
+								+e.table-cell 72
+								+e.table-cell 4 000 000
+								+icon('icon-sld-arr', 'stat-block__table-arr')
+							+e.table-row._hidden
+								+e.table-cell
+									+e.IMG(src='img/plans/stat-block_img.jpg' alt='img')
+
+							+e.table-row
+								+e.table-cell 1
+								+e.table-cell 8
+								+e.table-cell 72
+								+e.table-cell 4 000 000
+								+icon('icon-sld-arr', 'stat-block__table-arr')
+							+e.table-row._hidden
+								+e.table-cell
+									+e.IMG(src='img/plans/stat-block_img.jpg' alt='img')
+
+		//end commercial

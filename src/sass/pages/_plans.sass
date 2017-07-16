@@ -1,19 +1,8 @@
 .plan
+	padding: 20px 15px 0
 	&__container
-		position: relative
 		max-width: 1374px
-		margin: 0 auto
 		padding: 0 30px
-		&::after, &::before
-			content: ''
-			position: absolute
-			top: calc(50% - 155px)
-			+s('vert-decor_sm')
-		&::before
-			left: 4px
-		&::after
-			right: 4px
-			+rotate(180)
 	&__title
 		margin-bottom: 25px
 	&__block
@@ -77,22 +66,32 @@
 			right: -65%
 			font-size: 0
 			&_prev
-				top: 0
+				top: -30px
 				+rotate(-90)
 			&_next
-				top: 100px
+				top: 70px
 				+rotate(90)
 			&-icon
 				fill: $crimson
 				font-size: 24px
 		&-btn.slick-disabled &-btn-icon
 			fill: rgba($crimson, .3)
+			
+	&__status
+		position: absolute
+		top: -1%
+		right: -42%
+		color: $crimson
+		text-align: center
+		line-height: 1
+		&-count
+			+os-b
+			font-size: 50px
+		&-text
+			margin-top: -5px
+			+os-r
+			font-size: 24px
 	
-	&_default
-		padding: 20px 0 0
-		
-	&_flat
-		padding: 20px 0
 	&_flat &__block
 		position: relative
 		padding: 50px 30px 0 30px
@@ -210,6 +209,7 @@
 .plan-data
 	&__title
 		margin-bottom: 80px
+		padding-right: 80px
 		+os-b
 		font-size: 39px
 		text-transform: uppercase

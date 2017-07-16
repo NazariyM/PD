@@ -6,8 +6,9 @@ import './components/_tabs';
 import './components/_menu';
 import './components/_sliders';
 import './components/_map';
+import './components/_accordion';
 import './common';
-import './_global';
+import './helpers';
 
 svg4everybody();
 
