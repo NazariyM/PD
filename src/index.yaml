@@ -49,9 +49,6 @@ PageList:
 - file: comfort.html
   ready: 100
 
-- file: floor-choice.html
-  ready: 100
-
 - file: plan.html
   ready: 100
 
