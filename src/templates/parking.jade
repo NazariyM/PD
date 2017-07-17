@@ -18,23 +18,32 @@ block content
 							+e.SPAN.floor-count.js-floor-status
 							+e.DIV.floor-text этаж
 
-						+e.UL.info
+						+e.UL.info.js-parking-info
 							+e.LI.info-item
 								+e.SPAN.info-text Номер места:&nbsp;
-								+e.SPAN.info-data
+								+e.SPAN.info-data.js-parking-place
 							+e.LI.info-item
 								+e.SPAN.info-text Общая площадь, м
 									+e.SUP 2
 									| :&nbsp;
-								+e.SPAN.info-data
+								+e.SPAN.info-data.js-parking-area
 							+e.LI.info-item
 								+e.SPAN.info-text Стоимость, руб.:&nbsp;
-								+e.SPAN.info-data
-					+e.scheme.js-parking-scheme
-						+e.scheme-item
-							+e.IMG(src='img/plans/parking.png' alt='img')
-							+e.place._1
-							+e.place._2
-							+e.place._3
+								+e.SPAN.info-data.js-parking-price
 
+					+e.scheme-wrap
+						+e.scheme.js-parking-scheme
+							+e.scheme-item
+								-var placeItem = 1
+								while placeItem < 46
+									+e.place(class='_#{placeItem}' data-place-area='49,76' data-place-price='4 000 000')
+									-placeItem++
+								+e.IMG(src='img/plans/parking.png' alt='img')
+
+							+e.scheme-item
+								-var placeItem = 1
+								while placeItem < 46
+									+e.place(class='_#{placeItem}' data-place-area='49,76' data-place-price='4 000 000')
+									-placeItem++
+								+e.IMG(src='img/plans/parking.png' alt='img')
 		//begin parking
