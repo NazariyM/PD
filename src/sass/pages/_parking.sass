@@ -1,0 +1,80 @@
+.parking
+	padding: 30px 15px 0
+	&__title
+		margin-bottom: 20px
+	&__container
+		max-width: 1300px
+	&__block
+		position: relative
+		height: 845px
+		+clr
+	&__data
+		position: absolute
+		z-index: 1
+		top: 0
+		left: 0
+	&__floor
+		width: 134px
+		height: 142px
+		padding: 15px
+		border-radius: 10px
+		background-color: #e7d3a9
+		text-align: center
+		&-count
+			font-size: 50px
+			color: $crimson
+			+os-b
+		&-text
+			color: $crimson
+			font-size: 24px
+			+os-r
+	&__info
+		min-width: 362px
+		margin-top: 40px
+		padding: 30px 5px 25px 25px
+		border-radius: 10px
+		background-color: #e7d3a9
+		font-size: 24px
+		&-item
+			line-height: 1
+			&:not(:first-child)
+				margin-top: 10px
+		&-text
+			color: $grey
+			+os-r
+		&-data
+			color: $crimson
+			+os-b
+		span
+			display: inline-block
+			vertical-align: middle
+		sup
+			font-size: 12px
+			vertical-align: super
+			
+	&__scheme
+		float: right
+		&-item
+			position: relative
+	&__place
+		position: absolute
+		z-index: 2
+		cursor: pointer
+		+tr(background .3s)
+		+hover
+			background: rgba($crimson, .3)
+		&_1
+			width: 10%
+			height: 6.6%
+			bottom: 1%
+			left: 0
+		&_2
+			width: 10.1%
+			height: 6.6%
+			bottom: 1%
+			left: 11.1%
+		&_3
+			width: 10%
+			height: 6.6%
+			bottom: 1%
+			left: 22.1%

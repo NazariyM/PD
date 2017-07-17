@@ -57,3 +57,6 @@ PageList:
 
 - file: commercial-property.html
   ready: 100
+
+- file: parking.html
+  ready: 100

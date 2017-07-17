@@ -7,6 +7,7 @@ import './components/_menu';
 import './components/_sliders';
 import './components/_map';
 import './components/_stat-block';
+import './components/_parking';
 import './common';
 import './helpers';
 
