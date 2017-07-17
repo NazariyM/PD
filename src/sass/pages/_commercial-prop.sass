@@ -9,18 +9,20 @@
 /* stat-block
 	----------------------------------- */
 .stat-block
-	padding: 28px 65px 28px 28px
+	padding: 20px 28px 20px
 	background: $white
 	border-radius: 10px
 	border: 1px solid #d3c17f
 	&__info
 		display: flex
+		margin-bottom: 25px
 		&-descr
-			flex: 0 1 850px
+			flex: 0 1 830px
 			padding-right: 30px
 			color: $grey
 			+os-r
 			font-size: 18px
+			line-height: 22px
 	&__places
 		display: flex
 		flex: 1 0 340px
@@ -28,10 +30,10 @@
 			+os-b
 			text-align: center
 			&:not(:first-child)
-				margin-left: 40px
+				margin-left: 95px
 		&-count
 			font-size: 88px
-			line-height: 1
+			line-height: 80px
 			&_all
 				color: $crimson
 			&_free
@@ -41,12 +43,27 @@
 			color: $grey
 			
 	&__table
-		height: 680px
-		border: 1px solid $crimson
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			z-index: 1
+			bottom: 0
+			left: 0
+			right: 34px
+			height: 1px
+			background: $crimson
 		sup
 			font-size: 10px
 			line-height: 1
 			vertical-align: super
+		&-item
+			border-left: 1px solid $crimson
+			border-right: 1px solid $crimson
+		&-item.is-open &-row
+			background: #fce4c9
+		&-item.is-open &-arr
+			+rotate(-90)
 		&-row
 			position: relative
 			display: flex
@@ -55,14 +72,8 @@
 			cursor: pointer
 			background: rgba(#f0d4aa, .4)
 			transition: background .3s ease
-			&.is-open
-				background: #fce4c9
 			+hover
 				background: $beige
-			&_hidden
-				display: none
-				cursor: default
-				background: $white
 		&-cell
 			flex: 1 1 25%
 			padding: 12px
@@ -74,6 +85,7 @@
 			display: flex
 			justify-content: space-between
 			align-items: center
+			max-width: 1222px
 			padding: 14px 0
 			background: $crimson
 			color: $white
@@ -88,9 +100,18 @@
 			&:nth-child(4)
 				padding-right: 60px
 		&-body
+			position: relative
+			height: 637px
+			padding-right: 34px
 			+os-r
 			font-size: 24px
 			color: $grey
+		&-content
+			display: none
+			padding: 15px 0
+			cursor: default
+			background: $white
+			text-align: center
 		&-arr
 			position: absolute
 			top: calc(50% - 10px)
@@ -98,3 +119,4 @@
 			fill: $crimson
 			+rotate(90)
 			font-size: 22px
+			+tr(transform .3s)

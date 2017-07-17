@@ -6,7 +6,7 @@ import './components/_tabs';
 import './components/_menu';
 import './components/_sliders';
 import './components/_map';
-import './components/_accordion';
+import './components/_stat-block';
 import './common';
 import './helpers';
 
