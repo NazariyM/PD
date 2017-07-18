@@ -60,19 +60,39 @@
 			+xs
 				height: auto
 				margin: 0
+			+r(424)
+				height: 198px
 		&_default
 			max-width: 1340px
 			padding: 0 98px
+			+r(1879)
+				padding: 0 55px
+			+r(424)
+				padding: 0 0 60px
 		&_default &-item
 			height: 198px
 			margin: 0 10px
-	
+			+r(1879)
+				margin: 0 5px
+				
 	&_developer
 		padding: 110px 20px 15px 40px
+		+lg
+			padding: 80px 20px 30px 20px
+		+sm
+			padding: 40px 20px 30px
+		+xs
+			padding: 40px 10px 30px
 	&_developer &__title
 		margin-bottom: 60px
+		+sm
+			margin-bottom: 40px
 	&_developer &__title span
 		padding: 0 164px
+		+sm
+			padding: 0 130px
+		+xs
+			padding: 0
 	&_developer &__descr-item
 		&:not(:first-child)
 			margin-top: 15px

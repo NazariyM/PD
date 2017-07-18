@@ -28,7 +28,26 @@ $aboutConceptSlider.slick($.extend({}, aboutSldDefaults, {
 }));
 
 $aboutSlider.slick($.extend({}, aboutSldDefaults, {
-  slidesToShow: 4
+  slidesToShow: 4,
+  responsive: [{
+    breakpoint: 1599,
+    settings: {
+      slidesToShow: 3,
+      slidesToScroll: 1
+    }
+  }, {
+    breakpoint: 1023,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 1
+    }
+  }, {
+    breakpoint: 767,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  }]
 }));
 
 // plan look
