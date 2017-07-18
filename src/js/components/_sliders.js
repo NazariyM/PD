@@ -11,7 +11,20 @@ const aboutSldDefaults = {
 };
 
 $aboutConceptSlider.slick($.extend({}, aboutSldDefaults, {
-  slidesToShow: 3
+  slidesToShow: 3,
+  responsive: [{
+    breakpoint: 1023,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 1
+    }
+  }, {
+    breakpoint: 767,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  }]
 }));
 
 $aboutSlider.slick($.extend({}, aboutSldDefaults, {
@@ -22,8 +35,8 @@ $aboutSlider.slick($.extend({}, aboutSldDefaults, {
 const $planLook = $('.js-plan-look');
 const $status = $('.js-status');
 
-$planLook.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-  const i = (currentSlide ? currentSlide : 0) + 1;
+$planLook.on('init reInit afterChange', (event, slick, currentSlide, nextSlide) => {
+  const i = (currentSlide || 0) + 1;
   $status.text(i);
 });
 
@@ -31,7 +44,6 @@ $planLook.slick({
   slidesToScroll: 1,
   slidesToShow: 1,
   vertical: true,
-  // fade: true,
   draggable: false,
   infinite: false,
   prevArrow: '<button type="button" class="plan__look-btn plan__look-btn_prev"><svg class="plan__look-btn-icon icon-sld-arr"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-sld-arr"></use></svg></button>',

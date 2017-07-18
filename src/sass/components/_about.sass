@@ -1,12 +1,19 @@
 .about
 	&__title
 		margin-bottom: 55px
+		+lg
+			margin-bottom: 35px
+		+xs
+			margin-bottom: 20px
 	&__descr
 		margin-bottom: 30px
 		&-item
 			line-height: 24px
 			&:not(:first-child)
 				margin-top: 24px
+		&-text
+			+lg
+				text-indent: 25px
 				
 	&__slider
 		display: none
@@ -14,7 +21,6 @@
 		&.slick-initialized
 			display: block
 		&-item
-		
 		.slick-arrow
 			position: absolute
 			top: calc(50% - 24px)
@@ -23,6 +29,9 @@
 			border: 2px solid $crimson
 			border-radius: 50%
 			+hide-text
+			+r(424)
+				top: auto
+				bottom: 0
 			&::before
 				content: ''
 				position: absolute
@@ -39,9 +48,18 @@
 		&_concept
 			max-width: 1320px
 			padding: 0 95px
+			+lg
+				padding: 0 60px
+			+r(424)
+				padding: 0 0 60px
 		&_concept &-item
 			height: 239px
 			margin: 0 6px
+			+lg
+				height: 184px
+			+xs
+				height: auto
+				margin: 0
 		&_default
 			max-width: 1340px
 			padding: 0 98px
@@ -61,6 +79,12 @@
 		
 	&_concept
 		padding: 110px 20px 15px 40px
+		+lg
+			padding: 110px 25px 40px 25px
+		+sm
+			padding: 40px 15px 30px
+		+xs
+			padding: 40px 10px 30px
 	&_concept &__descr
 		margin-bottom: 20px
 	&_concept &__descr-item
