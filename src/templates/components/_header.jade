@@ -1,13 +1,13 @@
 //begin header
-+b.HEADER.header
++b.HEADER.header.js-header
 	+e.H1 Преображенский двор
 	+e.in
-		+e.A.logo.logo(href='#!')
+		+e.A.logo(href='#!')
 			+e.IMG(src='img/logo.png')
 
 		+b.NAV.menu.header__menu
 			+e.UL.list.js-menu-list
-				+e.LI.list-item.is-active
+				+e.LI.list-item
 					+e.A.list-link
 						+e.SPAN Концепция проекта
 						+icon('icon-arr-smp', 'menu__list-icon')
@@ -67,4 +67,8 @@
 				+e.SPAN Адрес офиса продаж
 			+e.A.item._tel(href='tel:+78462443504') +7 (846) 244-35-04
 			+e.A.btn.btn._red(href='#!') Оставить заявку
+
++b.hamburger._spin.js-hamburger
+	+e.box
+		+e.inner
 //end header

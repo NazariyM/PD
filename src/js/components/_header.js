@@ -1,5 +1,9 @@
 /* eslint-disable no-trailing-spaces */
+import { BODY, WINDOW } from '../helpers';
+
 initMenu();
+headerToggle();
+
 function initMenu() {
   const $menu = $('.js-menu-list');
 
@@ -31,5 +35,31 @@ function initMenu() {
       const $subMenu = $this.children();
       if ($this.hasClass('is-active')) $subMenu.trigger('click');
     });
+  });
+}
+
+function headerToggle() {
+  const $header = $('.js-header');
+  const $hamburger = $('.js-hamburger');
+
+  $hamburger.on('click', function () {
+    const $this = $(this);
+    $this.toggleClass('is-active');
+    $header.toggleClass('is-visible');
+    BODY.toggleClass('is-locked');
+  });
+
+  // if ($header.hasClass('is-visible')) {
+  //   BODY.on('click', function () {
+  //     $hamburger.removeClass('is-active');
+  //     $header.removeClass('is-visible');
+  //     BODY.removeClass('is-locked');
+  //   });
+  // }
+
+  WINDOW.on('resize', function () {
+    $hamburger.removeClass('is-active');
+    $header.removeClass('is-visible');
+    BODY.removeClass('is-locked');
   });
 }

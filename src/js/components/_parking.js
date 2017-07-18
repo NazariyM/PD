@@ -7,13 +7,12 @@ function initParkingBlock() {
   const $parkingInfo = $('.js-parking-info');
   const $status = $('.js-floor-status');
 
-  $parkingScheme.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-    const i = (currentSlide ? currentSlide : 0) + 1;
+  $parkingScheme.on('init reInit afterChange', (event, slick, currentSlide, nextSlide) => {
+    const i = (currentSlide || 0) + 1;
     $status.text(i);
-
   });
-  $parkingScheme.on('afterChange', function (event, slick, currentSlide, nextSlide) {
-    $parkingInfo.fadeOut(500, function () {
+  $parkingScheme.on('afterChange', (event, slick, currentSlide, nextSlide) => {
+    $parkingInfo.fadeOut(500, function() {
       $(this).removeClass('is-visible').removeAttr('style');
       $('.parking__place').removeClass('is-active');
     });
@@ -29,11 +28,11 @@ function initParkingBlock() {
     nextArrow: '<button type="button" class="parking__scheme-btn parking__scheme-btn_next"><svg class="parking__scheme-btn-icon icon-sld-arr"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-sld-arr"></use></svg></button>'
   });
 
-  $parkingSchemeItem.each(function () {
+  $parkingSchemeItem.each(function() {
     const $this = $(this);
     const $parkingPlace = $this.find('.parking__place');
 
-    $parkingPlace.on('click', function (event) {
+    $parkingPlace.on('click', function(event) {
       event.preventDefault();
       const $that = $(this);
       const placeNumber = $that.index() + 1;
@@ -49,7 +48,6 @@ function initParkingBlock() {
       parkingPlace.text(placeNumber);
       parkingArea.text(placeArea);
       parkingPrice.text(placePrice);
-
     });
   });
 }

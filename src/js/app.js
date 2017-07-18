@@ -3,7 +3,7 @@ import objectFitImages from 'object-fit-images';
 
 import './components/_scroll';
 import './components/_tabs';
-import './components/_menu';
+import './components/_header';
 import './components/_sliders';
 import './components/_map';
 import './components/_stat-block';

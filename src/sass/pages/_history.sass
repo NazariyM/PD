@@ -1,5 +1,9 @@
 .history
 	padding: 60px 20px 15px 40px
+	+lg
+		padding: 60px 20px 15px 30px
+	+xs
+		padding: 70px 20px 30px
 	&__container
 		padding: 0
 	&__title span
@@ -7,17 +11,33 @@
 	&__article
 		margin: 60px 0 0
 		color: $grey
+		+xs
+			margin: 40px 0 0
 		&-top
-			display: flex
-			align-items: flex-start
 			margin-bottom: 30px
+			+clr
+			+md
+				margin-bottom: 15px
 		&-title
 			margin-bottom: 25px
 			padding-right: 190px
 			+f('con', 24)
+			+md
+				padding-right: 150px
+				margin-bottom: 10px
+				font-size: 20px
+			+sm
+				padding-right: 0
 		&-img
 			position: relative
-			flex: 0 1 465px
+			float: left
+			width: percentage(465 / 1452)
+			margin-right: 2.8745%
+			+lg
+				margin-bottom: 20px
+			+xs
+				float: none
+				width: 100%
 			&::before, &::after
 				content: ''
 				position: absolute
@@ -40,10 +60,15 @@
 					right: -15px
 					+rotate(180)
 		&-text
-			flex: 1 1 830px
-			margin-left: 42px
+			float: left
+			width: percentage(945 / 1452)
+			+r(1879)
+				float: none
+				width: 100%
 		&-descr
 			line-height: 22px
 		&-sub-title
 			margin: 15px 0
 			+f('con', 16)
+			+lg
+				margin: 10px 0

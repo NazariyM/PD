@@ -1,14 +1,14 @@
 initTabs();
 function initTabs() {
   const $tabs = $('.js-tabs');
-  $tabs.each(function () {
+  $tabs.each(function() {
     const $this = $(this);
     const $tabsNav = $this.find('.js-tabs-nav button');
     const $tabsContent = $this.find('.js-tabs-content > div');
 
     $tabsContent.hide();
 
-    $tabsNav.each(function () {
+    $tabsNav.each(function() {
       const $that = $(this);
       if ($that.hasClass('is-active')) {
         $that.trigger('click');

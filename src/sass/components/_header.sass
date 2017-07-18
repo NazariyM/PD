@@ -4,8 +4,7 @@
 	left: 0
 	bottom: 0
 	z-index: 100
-	min-width: 400px
-	padding: 15px 0 20px
+	width: 400px
 	background: #f0d4aa url("../img/bg/header-decor_bg.png") no-repeat 50% 50%
 	border-right: 3px solid $crimson
 	min-height: 100vh
@@ -16,12 +15,28 @@
 		background-color: $beige
 	+scrollbar-thumb
 		background-color: $crimson
+	+md
+		width: 330px
+	+r(1279)
+		transform: translateX(-100%)
+		transition: transform .25s linear
+		overflow: visible
+	+xs
+		width: 100%
+		background-repeat: repeat-x
+	&.is-visible
+		transform: translateX(0)
+		overflow-y: auto
+		
 	&__in
 		display: flex
 		flex-direction: column
-		height: 100%
 		max-width: 300px
 		margin: 0 auto
+		padding: 20px 0 25px
+		min-height: 100vh
+		+md
+			padding: 15px 0
 		&::after
 			pointer-events: none
 			position: absolute
@@ -31,13 +46,26 @@
 			content: ''
 			+s('vert-decor_red')
 			width: 26px
+			+xs
+				display: none
 	&__title-decor
 		margin: auto 0 63px
-		
+		+lg
+			margin: auto 0 35px
+	
 	&__logo
+		display: block
 		margin: auto auto 40px
+		+md
+			width: 230px
+			margin: 0 auto 20px
+		img
+			display: block
+			margin: 0 auto
+			+md
+			    +gpu
 	&__menu
-		padding: 0 0 35px 65px
+		padding: 0 0 35px 55px
 	
 	h1
 		+hide-text
@@ -62,6 +90,8 @@
 			cursor: pointer
 			+hover
 				color: $crimson
+			+md
+				font-size: 16px
 			span
 				display: inline-block
 				vertical-align: middle
@@ -77,6 +107,8 @@
 	&__sub-list
 		display: none
 		padding: 25px 0 25px 6px
+		+md
+			padding: 15px 0 15px 6px
 		li
 			position: relative
 			padding-left: 30px
@@ -103,14 +135,22 @@
 		position: relative
 		margin-bottom: 10px
 		padding-left: 40px
+		+md
+			padding-left: 30px
+			margin-bottom: 10px
 		&::before
 			content: ''
 			position: absolute
 			top: 8px
 			left: 0
+			+md
+				top: 3px
 		&_link
 			font-size: 20px
 			line-height: 44px
+			+md
+				font-size: 16px
+				line-height: 30px
 			&::before
 				+s('loc-marker')
 			span
@@ -121,6 +161,9 @@
 		&_tel
 			font-size: 24px
 			line-height: 39px
+			+md
+				font-size: 18px
+				line-height: 30px
 			&::before
 				+s('phone')
 				
@@ -129,13 +172,13 @@
 		flex-direction: column
 		align-items: flex-start
 		padding: 0 18px
+		+md
+			align-items: center
+			margin-top: auto
 		#{$this}__btn
 			align-self: center
-
-/* logo
+			+md
+				font-size: 15px
+				
+/* hamburger
 	----------------------------------- */
-.logo
-	display: block
-	img
-		display: block
-		margin: 0 auto
