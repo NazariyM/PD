@@ -115,6 +115,19 @@
 	&_float-bottom
 		right: 40px
 		bottom: 60px
+		+sm
+			display: none
+	&_float-bottom &__item
+		+r(1879)
+			width: 146px
+			height: 146px
+			min-height: 146px
+	&_float-bottom &__item-text
+		+r(1879)
+			margin-top: 68px
+			font-size: 15px
+	&_float-bottom &__item-img_loupe::after
+		margin-top: 28px
 	&_float-bottom-mod
 		right: 15px
 		bottom: 26px

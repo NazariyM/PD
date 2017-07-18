@@ -12,11 +12,19 @@
 			left: calc(50% - 133px)
 			bottom: 45px
 			+s('horiz-decor')
+			+xs
+				bottom: 22px
+		+r(424)
+			margin: 0 -20px
 	&__title
 		margin-bottom: 60px
+		+xs
+			margin-bottom: 40px
 	&__nav
 		display: flex
 		font-size: 0
+		+xs
+			flex-direction: column
 		&-item
 			flex: 1 1 33.33333%
 			height: 57px
@@ -29,8 +37,17 @@
 			font-size: 24px
 			cursor: pointer
 			transition: color .3s, background .3s
+			-webkit-tap-highlight-color: transparent
+			+md
+				height: 50px
+				line-height: 51px
+				font-size: 20px
 			&:not(:first-child)
 				margin-left: 2px
+				+xs
+					margin: 0
+					&:nth-child(2), &:nth-child(3)
+						border-radius: 0
 			&.is-active
 				pointer-events: none
 				color: $white
@@ -43,6 +60,10 @@
 		border: 1px solid $beige
 		background-color: $white
 		z-index: 2
+		+md
+			min-height: 0
+		+sm
+			padding: 30px 20px 80px
 		&::before, &::after
 			content: ''
 			position: absolute
@@ -50,6 +71,8 @@
 			+s('vert-decor')
 			width: 26px
 			z-index: 1
+			+r(424)
+				display: none
 		&::before
 			left: -27px
 		&::after
@@ -60,6 +83,9 @@
 			+f('con', 24)
 			color: $crimson
 			text-align: center
+			+xs
+				margin-bottom: 15px
+				font-size: 22px
 		&-descr
 			text-indent: 20px
 			text-align-last: center
@@ -143,4 +169,4 @@
 		padding: 0 156px
 		
 	&_how-buy
-		padding: 60px 0 25px
+		padding: 0 0 25px

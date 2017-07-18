@@ -1,18 +1,3 @@
-/* ===================================
-	 home
-	 =================================== */
-.home
-	+coverdiv
-	display: flex
-	justify-content: flex-end
-	&__bg
-		+coverdiv
-		+cover
-		background-size: 100% 100%
-		z-index: -1
-		&.bg-night
-			display: none
-
 /* time-bar
 	----------------------------------- */
 .time-bar
@@ -46,11 +31,19 @@
 		max-width: 1072px
 	&__title
 		margin-bottom: 70px
+		+sm
+			margin-bottom: 50px
 	&__list
 		display: flex
 		justify-content: space-between
+		+sm
+			flex-wrap: wrap
+			justify-content: center
 	&__item
-		padding: 0 5px
+		flex: 0 1 auto
+		margin: 0 10px
+		+sm
+			margin: 0 30px 20px
 
 /* arrow-link
 	----------------------------------- */

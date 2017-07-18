@@ -147,3 +147,33 @@
 		+coverdiv
 		z-index: -1
 		background-image: url("../img/bg/bg-pattern.png")
+		
+/* ===================================
+	 home
+	 =================================== */
+.home
+	+coverdiv
+	display: flex
+	justify-content: flex-end
+	&__bg
+		+coverdiv
+		+cover
+		background-size: 100% 100%
+		z-index: -1
+		&.bg-night
+			display: none
+
+/* ===================================
+	 how-buy
+	 =================================== */
+.how-buy
+	padding: 60px 15px 15px
+	+r(1879)
+		padding: 90px 15px 15px
+	+sm
+		padding: 40px 15px 15px
+	+ .category_float-bottom
+		+r(1879)
+			top: 15px
+			right: 15px
+			bottom: auto
