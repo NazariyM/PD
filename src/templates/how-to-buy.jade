@@ -4,7 +4,7 @@ title: ПД Как купить
 extends layouts/_layout
 block content
 	//begin main
-	+b.DIV.main._has-decor
+	+b.DIV.main._has-decor.js-main
 
 		+b.SECTION.how-buy
 			//begin tabs
@@ -33,9 +33,8 @@ block content
 
 			//- clients
 			include components/_clients
-
-		//-category
-		-categoryClass = '_float-bottom'
-		-categoryList = [{colorMod: 'beige', picMod: 'loupe', img: '3', text: 'Поиск', brText: 'квартиры'}]
-		include components/_category
+			//-category
+			-categoryClass = '_float-bottom'
+			-categoryList = [{colorMod: 'beige', picMod: 'loupe', img: '3', text: 'Поиск', brText: 'квартиры'}]
+			include components/_category
 	//end main

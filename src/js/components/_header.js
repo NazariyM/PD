@@ -41,7 +41,7 @@ function initMenu() {
 function headerToggle() {
   const $header = $('.js-header');
   const $hamburger = $('.js-hamburger');
-  const $main = $('.main');
+  const $main = $('.js-main');
 
   $hamburger.on('click', function (e) {
     e.stopPropagation();
@@ -50,10 +50,6 @@ function headerToggle() {
     $header.toggleClass('is-visible');
     BODY.toggleClass('is-locked');
     $main.toggleClass('is-active');
-  });
-
-  $header.on('click', function (ev) {
-    ev.stopPropagation();
   });
 
   BODY.on('click', function () {
@@ -68,5 +64,9 @@ function headerToggle() {
     $header.removeClass('is-visible');
     BODY.removeClass('is-locked');
     $main.removeClass('is-active');
+  });
+
+  $header.on('click', function (ev) {
+    ev.stopPropagation();
   });
 }
