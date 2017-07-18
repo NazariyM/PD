@@ -25,6 +25,7 @@
 	+xs
 		width: 100%
 		background-repeat: repeat-x
+		border: 0
 	&.is-visible
 		transform: translateX(0)
 		overflow-y: auto
@@ -79,6 +80,7 @@
 		+os-r
 		line-height: 1
 		&-item
+			-webkit-tap-highlight-color: transparent
 			&:not(:first-child)
 				margin-top: 6px
 			&.is-active span
@@ -113,6 +115,7 @@
 		li
 			position: relative
 			padding-left: 30px
+			-webkit-tap-highlight-color: transparent
 			&::before
 				content: ''
 				position: absolute
