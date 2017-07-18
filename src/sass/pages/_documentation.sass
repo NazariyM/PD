@@ -1,38 +1,63 @@
 .doc
 	padding: 50px 40px 15px 70px
+	+lg
+		padding: 50px 35px 35px
+	+sm
+		padding: 50px 15px 35px
+	+xs
+		padding: 60px 10px 30px
 	&__container
 		padding: 0
 	&__title
 		margin-bottom: 50px
+		+xs
+			margin-bottom: 25px
 		span
 			padding: 0 104px
 	&__descr
 		padding-right: 170px
 		margin-bottom: 30px
+		+r(1879)
+			padding-right: 140px
+		+sm
+			padding-right: 0
 
 .doc-download
 	padding: 17px 30px 0
 	border-radius: 0 0 15px 15px
 	border: 1px solid #f0d4aa
 	background: $white
+	+xs
+		padding: 0 10px
 	&__row
 		display: flex
 		justify-content: flex-start
 		align-items: center
 		padding: 14px 0
 		border-bottom: 1px solid #f0d4aa
+		+xs
+			flex-wrap: wrap
+			justify-content: center
+			padding: 20px 0
 		&:last-child
 			border-bottom-color: transparent
 	&__item
 		display: flex
 		align-items: center
 		margin-right: 14px
+		+xs
+			flex: 1 1 100%
+			flex-wrap: wrap
+			margin: 0 0 10px
 		&-img
 			margin-right: 20px
+			+xs
+				margin-right: 10px
 			&_pic
 				position: relative
 				width: 38px
 				height: 38px
+				min-width: 38px
 				border-radius: 9px
 				background-color: #3572e1
 				text-align: center
@@ -48,11 +73,19 @@
 			margin-right: 7px
 			+os-b
 			color: $crimson
+			+xs
+				margin: 0
+				width: calc(100% - 50px)
+				line-height: 20px
 			+hover
 				text-decoration: underline
 		&-size
 			font-size: 14px
 			color: #5e5e5e
+			flex: 0 0 auto
+			+xs
+				flex: 1 1 100%
+				text-align: center
 	&__btn
 		padding: 0 25px
 		height: 29px
