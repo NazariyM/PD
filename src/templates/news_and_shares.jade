@@ -5,118 +5,119 @@ extends layouts/_layout
 block content
 	//begin main
 	+b.DIV.main._has-decor
-		//begin news-tabs
-		+b.SECTION.tabs._news.js-tabs
-			+e.container.container
-				+e.H2.title.title-decor-sm
-					+e.SPAN Новости
-				+e.nav.js-tabs-nav
-					+e.BUTTON.nav-item.is-active(type='button') Пресса о нас
-					+e.BUTTON.nav-item(type='button') Интервью
-					+e.BUTTON.nav-item(type='button') Наша жизнь
-				+e.content.js-tabs-content
-					+e.content-item
-						+e.ARTICLE.article
-							+e.article-img-wrap
-								+b.IMG.obj-fit(src='img/content/news-1.jpg')
-							+e.article-text
-								+e.H5.content-title Покупка квартиры в ипотеку
-								+e.article-date 26/05/2017
-								+e.P.content-descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-								+e.A.article-btn.btn_red(href='#!') Подробнее
+		+b.SECTION.news-shares
+			//begin news-tabs
+			+b.SECTION.tabs._news.js-tabs
+				+e.container.container
+					+e.H2.title.title-decor-sm
+						+e.SPAN Новости
+					+e.nav.js-tabs-nav
+						+e.BUTTON.nav-item.is-active(type='button') Пресса о нас
+						+e.BUTTON.nav-item(type='button') Интервью
+						+e.BUTTON.nav-item(type='button') Наша жизнь
+					+e.content.js-tabs-content
+						+e.content-item
+							+e.ARTICLE.article
+								+e.article-img-wrap
+									+b.IMG.obj-fit(src='img/content/news-1.jpg')
+								+e.article-text
+									+e.H5.content-title Покупка квартиры в ипотеку
+									+e.article-date 26/05/2017
+									+e.P.content-descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+									+e.A.article-btn.btn_red(href='#!') Подробнее
 
-						+e.card-row
-							-i = 0
-							while i < 3
-								+e.A.card(href='#!')
-									+e.DIV.card-img-wrap
-										+b.IMG.obj-fit(src='img/content/news-1.jpg')
-									+e.SPAN.card-date 26/05/2017
-									+e.H4.card-title Покупка квартиры в ипотеку
-								-i++
+							+e.card-row
+								-i = 0
+								while i < 3
+									+e.A.card(href='#!')
+										+e.DIV.card-img-wrap
+											+b.IMG.obj-fit(src='img/content/news-1.jpg')
+										+e.SPAN.card-date 26/05/2017
+										+e.H4.card-title Покупка квартиры в ипотеку
+									-i++
 
-						+e.more-text
-							+b.A.link(href='#!') Больше новостей
+							+e.more-text
+								+b.A.link(href='#!') Больше новостей
 
-					+e.content-item
-						+e.ARTICLE.article
-							+e.article-img-wrap
-								+b.IMG.obj-fit(src='img/content/news-1.jpg')
-							+e.article-text
-								+e.H5.content-title Интервью квартиры
-								+e.article-date 26/05/2017
-								+e.P.content-descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-								+e.A.article-btn.btn_red(href='#!') Подробнее
+						+e.content-item
+							+e.ARTICLE.article
+								+e.article-img-wrap
+									+b.IMG.obj-fit(src='img/content/news-1.jpg')
+								+e.article-text
+									+e.H5.content-title Интервью квартиры
+									+e.article-date 26/05/2017
+									+e.P.content-descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+									+e.A.article-btn.btn_red(href='#!') Подробнее
 
-						+e.card-row
-							-i = 0
-							while i < 3
-								+e.A.card(href='#!')
-									+e.DIV.card-img-wrap
-										+b.IMG.obj-fit(src='img/content/news-1.jpg')
-									+e.SPAN.card-date 26/05/2017
-									+e.H4.card-title Покупка квартиры в ипотеку
-								-i++
+							+e.card-row
+								-i = 0
+								while i < 3
+									+e.A.card(href='#!')
+										+e.DIV.card-img-wrap
+											+b.IMG.obj-fit(src='img/content/news-1.jpg')
+										+e.SPAN.card-date 26/05/2017
+										+e.H4.card-title Покупка квартиры в ипотеку
+									-i++
 
-						+e.more-text
-							+b.A.link(href='#!') Больше новостей
+							+e.more-text
+								+b.A.link(href='#!') Больше новостей
 
-					+e.content-item
-						+e.ARTICLE.article
-							+e.article-img-wrap
-								+b.IMG.obj-fit(src='img/content/news-1.jpg')
-							+e.article-text
-								+e.H5.content-title Покупка квартиры в ипотеку
-								+e.article-date 26/05/2017
-								+e.P.content-descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-								+e.A.article-btn.btn_red(href='#!') Подробнее
+						+e.content-item
+							+e.ARTICLE.article
+								+e.article-img-wrap
+									+b.IMG.obj-fit(src='img/content/news-1.jpg')
+								+e.article-text
+									+e.H5.content-title Покупка квартиры в ипотеку
+									+e.article-date 26/05/2017
+									+e.P.content-descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+									+e.A.article-btn.btn_red(href='#!') Подробнее
 
-						+e.card-row
-							-i = 0
-							while i < 3
-								+e.A.card(href='#!')
-									+e.DIV.card-img-wrap
-										+b.IMG.obj-fit(src='img/content/news-1.jpg')
-									+e.SPAN.card-date 26/05/2017
-									+e.H4.card-title Покупка квартиры в ипотеку
-								-i++
+							+e.card-row
+								-i = 0
+								while i < 3
+									+e.A.card(href='#!')
+										+e.DIV.card-img-wrap
+											+b.IMG.obj-fit(src='img/content/news-1.jpg')
+										+e.SPAN.card-date 26/05/2017
+										+e.H4.card-title Покупка квартиры в ипотеку
+									-i++
 
-						+e.more-text
-							+b.A.link(href='#!') Больше новостей
-		//end news-tabs
+							+e.more-text
+								+b.A.link(href='#!') Больше новостей
+			//end news-tabs
 
-		//begin shares
-		+b.SECTION.tabs._shares.js-tabs
-			+e.container.container
-				+e.H2.title.title-decor-sm
-					+e.SPAN Акции
-				+e.content
-					+e.content-item
-						+e.ARTICLE.article
-							+e.article-img-wrap
-								+b.IMG.obj-fit(src='img/content/news-1.jpg')
-							+e.article-text
-								+e.H5.content-title Скидка на квадратный метр
-								+e.article-date 26/05/2017
-								+e.P.content-descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-								+e.A.article-btn.btn_red(href='#!') Подробнее
+			//begin shares
+			+b.SECTION.tabs._shares
+				+e.container.container
+					+e.H2.title.title-decor-sm
+						+e.SPAN Акции
+					+e.content
+						+e.content-item
+							+e.ARTICLE.article
+								+e.article-img-wrap
+									+b.IMG.obj-fit(src='img/content/news-1.jpg')
+								+e.article-text
+									+e.H5.content-title Скидка на квадратный метр
+									+e.article-date 26/05/2017
+									+e.P.content-descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+									+e.A.article-btn.btn_red(href='#!') Подробнее
 
-						+e.card-row
-							-i = 0
-							while i < 3
-								+e.A.card(href='#!')
-									+e.DIV.card-img-wrap
-										+b.IMG.obj-fit(src='img/content/news-1.jpg')
-									+e.SPAN.card-date 26/05/2017
-									+e.H4.card-title Скидка на квадратный метр
-								-i++
+							+e.card-row
+								-i = 0
+								while i < 3
+									+e.A.card(href='#!')
+										+e.DIV.card-img-wrap
+											+b.IMG.obj-fit(src='img/content/news-1.jpg')
+										+e.SPAN.card-date 26/05/2017
+										+e.H4.card-title Скидка на квадратный метр
+									-i++
 
-						+e.more-text
-							+b.A.link(href='#!') Больше акций
-		//end shares
+							+e.more-text
+								+b.A.link(href='#!') Больше акций
+			//end shares
 
-		//-category
-		-categoryClass = '_float-fixed'
-		-categoryList = [{colorMod: 'beige', picMod: 'loupe', img: '3', text: 'Поиск', brText: 'квартиры'}]
-			include components/_category
+			//-category
+			-categoryClass = '_float-fixed'
+			-categoryList = [{colorMod: 'beige', picMod: 'loupe', img: '3', text: 'Поиск', brText: 'квартиры'}]
+				include components/_category
 	//end main

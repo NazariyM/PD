@@ -112,6 +112,21 @@
 		top: 75%
 		right: 40px
 		position: fixed
+		+xs
+			display: none
+	&_float-fixed &__item
+		+r(1879)
+			width: 120px
+			height: 120px
+			min-height: 120px
+	&_float-fixed &__item-text
+		+r(1879)
+			margin-top: 54px
+			line-height: 15px
+			font-size: 14px
+	&_float-fixed &__item-img_loupe::after
+		+r(1879)
+			margin-top: 10px
 	&_float-bottom
 		right: 40px
 		bottom: 60px
@@ -119,15 +134,19 @@
 			display: none
 	&_float-bottom &__item
 		+r(1879)
-			width: 146px
-			height: 146px
-			min-height: 146px
+			width: 120px
+			height: 120px
+			min-height: 120px
 	&_float-bottom &__item-text
+		margin-top: 88px
 		+r(1879)
-			margin-top: 68px
+			margin-top: 53px
 			font-size: 15px
+			line-height: 15px
 	&_float-bottom &__item-img_loupe::after
-		margin-top: 28px
+		margin-top: 38px
+		+r(1879)
+			margin-top: 10px
 	&_float-bottom-mod
 		right: 15px
 		bottom: 26px

@@ -19,7 +19,7 @@
 	&__title
 		margin-bottom: 60px
 		+xs
-			margin-bottom: 40px
+			margin-bottom: 25px
 	&__nav
 		display: flex
 		font-size: 0
@@ -38,7 +38,7 @@
 			cursor: pointer
 			transition: color .3s, background .3s
 			-webkit-tap-highlight-color: transparent
-			+md
+			+lg
 				height: 50px
 				line-height: 51px
 				font-size: 20px
@@ -96,12 +96,28 @@
 		display: flex
 		align-items: flex-start
 		color: #444444
+		+xs
+			flex-wrap: wrap
 		&-img-wrap
 			flex: 0 1 306px
 			margin-top: 7px
+			+sm
+				flex: 0 1 400px
+				margin-top: 0
+			+xs
+				flex: 1 1 100%
+				margin: 0 0 20px
 		&-text
 			flex: 0 1 528px
 			margin-left: 50px
+			+sm
+				margin-left: 20px
+			+xs
+				display: flex
+				flex: 1 1 100%
+				flex-direction: column
+				align-items: center
+				margin-left: 0
 		&-date
 			+os-r
 			font-size: 14px
@@ -110,9 +126,13 @@
 			padding: 0 60px
 		#{$tabs}__content-title
 			margin-bottom: 17px
+			+xs
+				margin-bottom: 5px
 		#{$tabs}__content-descr
 			margin-top: 20px
 			text-indent: 0
+			+sm
+				margin-top: 10px
 		#{$tabs}__content-title,
 		#{$tabs}__content-descr
 			text-align: left
@@ -121,9 +141,21 @@
 		display: flex
 		justify-content: space-between
 		margin-top: 63px
+		+sm
+			margin: 40px -5px 0
+		+xs
+			flex-wrap: wrap
 	&__card
 		position: relative
 		flex: 0 0 238px
+		+sm
+			flex: 0 1 238px
+			margin: 0 5px
+		+xs
+			flex: 1 1 100%
+			margin: 0 0 30px
+			&:last-child
+				margin-bottom: 0
 		.no-touch &:hover &-title
 			border-bottom-color: transparent
 		&-img-wrap
@@ -137,6 +169,9 @@
 			padding: 7px 6px
 			background: #70292b
 			color: $white
+			+sm
+				padding: 2px 6px
+				font-size: 14px
 		&-title
 			display: inline
 			padding-bottom: 2px
@@ -144,29 +179,47 @@
 			+f('con', 24)
 			color: $crimson
 			transition: border-color .25s
+			+lg
+				font-size: 20px
 	&__more-text
 		text-align: center
 		margin-top: 48px
-			
+		+sm
+			margin-top: 25px
+		
 	&_news
-		padding: 50px 0
+		margin-bottom: 100px
+		+lg
+			margin-bottom: 70px
+		+xs
+			margin-bottom: 45px
 	&_news &__container::after
 		display: none
 	&_news &__title span
 		padding: 0 138px
+		+xs
+			padding: 0
 	&_news &__content
 		min-height: 720px
 		padding: 43px 48px 18px
-		
-	&_shares
-		padding: 50px 0
-	&_shares::after
+		+lg
+			min-height: 0
+		+sm
+			padding: 25px 20px 20px
+		+xs
+			padding: 20px 15px 20px
+	
+	&_shares &__container::after
 		display: none
 	&_shares &__content
 		padding: 43px 48px 18px
 		border-radius: 15px
+		+xs
+			padding: 20px 15px
 	&_shares &__title span
 		padding: 0 156px
+		+xs
+			padding: 0
 		
 	&_how-buy
 		padding: 0 0 25px
