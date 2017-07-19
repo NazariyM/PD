@@ -60,3 +60,6 @@ PageList:
 
 - file: parking.html
   ready: 100
+
+- file: tech-map.html
+  ready: 100
