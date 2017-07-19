@@ -4,15 +4,37 @@
 	&__img
 		+coverdiv
 
-.floor-1
-	position: absolute
-	top: 61.4%
-	left: -9px
+/* floors
+	----------------------------------- */
+.floors
+	+coverdiv
+	z-index: 222
 	
-	//fill-opacity: .5
-	z-index: 1
 	svg
-		width: 690px
-		height: 400px
-#svgg:hover #path1
-	//fill-opacity: .8
+		width: 100%
+		height: 100%
+	&__item
+		position: absolute
+		&_1
+			top: 59.7%
+			left: 0
+			width: 42.00526%
+			height: 22.0875%
+		&_2
+			top: 54.4%
+			left: 0
+			width: 41.94211%
+			height: 16.05%
+		&_3
+			top: 49.1%
+			left: 0
+			width: 42.1%
+			height: 12.7%
+			
+	path
+		fill: #fad5a9
+		//opacity: 0
+		opacity: .7
+		cursor: pointer
+		&:hover
+			opacity: 1

@@ -9,6 +9,7 @@ import './components/_map';
 import './components/_stat-block';
 import './components/_parking';
 import './components/_tech-map';
+import './components/_floor-choice';
 import './common';
 import './helpers';
 
