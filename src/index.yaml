@@ -63,3 +63,12 @@ PageList:
 
 - file: tech-map.html
   ready: 100
+
+- file: floor-choice_1-2.html
+  ready: 100
+
+- file: floor-choice_3.html
+  ready: 100
+
+- file: section-choice.html
+  ready: 100
