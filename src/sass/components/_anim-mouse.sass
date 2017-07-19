@@ -1,0 +1,53 @@
+.anim-mouse
+	position: absolute
+	bottom: 50px
+	left: calc(50% - 16px)
+	width: 32px
+	height: 47px
+	border: 3px solid #fff
+	border-radius: 14px
+
+.anim-mouse__point
+	position: absolute
+	width: 6px
+	height: 6px
+	border-radius: 100%
+	background: #fff
+	left: 50%
+	top: 70%
+	transform: translate(-50%, 0)
+	animation-name: mousePoint
+	animation-duration: 2.3s
+	animation-iteration-count: infinite
+	animation-direction: reverse
+	animation-timing-function: linear
+	animation-fill-mode: backwards
+
+@keyframes mousePoint
+	0%
+		opacity: 0
+		top: 55%
+	
+	20%
+		opacity: 1
+		top: 55%
+	
+	40%
+		opacity: 1
+		top: 55%
+	
+	60%
+		opacity: 1
+		top: 20%
+	
+	61%
+		opacity: 1
+		top: 20%
+	
+	67%
+		opacity: 0
+		top: 20%
+	
+	100%
+		opacity: 0
+		top: 20%

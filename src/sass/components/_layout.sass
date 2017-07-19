@@ -20,12 +20,13 @@
 	overflow-y: auto
 	overflow-x: hidden
 	transition: transform .25s linear
-	+scrollbar
-		width: 8px
-		box-shadow: inset 0 0 6px rgba($crimson, .5)
-		background-color: $beige
-	+scrollbar-thumb
-		background-color: $crimson
+	+rmin(767)
+		+scrollbar
+			width: 8px
+			box-shadow: inset 0 0 6px rgba($crimson, .5)
+			background-color: $beige
+		+scrollbar-thumb
+			background-color: $crimson
 	&.is-active
 		transform: translateX(330px)
 		+xs

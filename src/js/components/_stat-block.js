@@ -1,9 +1,12 @@
 /* eslint-disable no-trailing-spaces */
-$(() => {
-  $('.js-accordion > .accordion-item').click(function() {
+(function initStatBlock() {
+  const $statBlock = $('.js-stat-block');
+  const $statBlockItem = $statBlock.find('.stat-block__table-item');
+  $statBlockItem.on('click', function() {
+    const $this = $(this);
+    const $statBlockContent = $this.find('.stat-block__table-content');
 
-    $(this).siblings('.accordion-item').removeClass('is-open').children('.accordion-panel').slideUp();
-    $(this).toggleClass('is-open').children('.accordion-panel').slideToggle('ease-out');
-
+    $this.toggleClass('is-open');
+    $statBlockContent.slideToggle();
   });
-});
+}());
