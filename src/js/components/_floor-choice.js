@@ -48,7 +48,7 @@ function initFloorChoice() {
         .insertBefore($svg)
         .css({
           top: positionY + +offset[$this.data('floor')],
-          left: positionX - tooltip.outerWidth() + 60 + '%'
+          left: positionX - tooltip.outerWidth() + 700
         })
         .fadeIn(250);
     });
