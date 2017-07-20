@@ -8,11 +8,25 @@
 	----------------------------------- */
 .floors
 	+coverdiv
-	z-index: 222
+	z-index: 1
 	
 	svg
-		width: 100%
-		height: 100%
+		//position: absolute
+		//top: 7.3%
+		//left: 0
+		//width: 65.2%
+		//height: 78.2%
+		//max-width: 1000px
+		//max-height: 730px
+		//z-index: 2
+		position: absolute
+		top: 7.3%
+		left: 0
+		width: 65.2%
+		height: 78.2%
+		max-width: 1000px
+		max-height: 730px
+		z-index: 2
 	&__item
 		position: absolute
 		&_1
@@ -36,5 +50,33 @@
 		//opacity: 0
 		opacity: .7
 		cursor: pointer
+		transition: .3s ease
 		&:hover
 			opacity: 1
+			
+	&__tooltip
+		position: absolute
+		//right: 50%
+		//top: 50%
+		z-index: 10
+		width: 150px
+		height: 150px
+		background: $beige
+		border-radius: 50%
+		padding: 15px
+		text-align: center
+		background: url("../img/bg/header-decor_bg.png")
+		&-block
+			padding: 4px 0
+			line-height: 18px
+			&:nth-child(1)
+				margin-bottom: 11px
+				border-bottom: 1px solid $crimson
+				color: $crimson
+				padding: 6px 0
+		&-count
+			font-size: 36px
+			+os-b
+		&-text
+			font-size: 16px
+			+os-r
