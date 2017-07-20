@@ -6,33 +6,22 @@ initFloorChoice();
 function initFloorChoice() {
   const $svg = $('.js-floor-svg');
   const $genPlanSvg = $('.js-gen-plan-svg');
-  // if (!$floorSvg.length) return;
+
+  if (!$svg.length) return;
 
   let $path = $svg.find('path'),
     href = $svg.data('href'),
     extension = $svg.data('extension'),
     $genPlanPath = $genPlanSvg.find('path'),
-    genPlanHref = $genPlanPath.data('section-href'),
-    genPlanExtension = $genPlanSvg.data('extension');
+    genPlanExtension = $genPlanSvg.data('extension'),
+    tooltipText = $svg.data('tip-text');
 
   showPathTooltip();
   hrefPath();
   hrefGenPlan();
 
   function showPathTooltip() {
-    let tooltip,
-      offset = [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ];
+    let tooltip;
 
     $path.on('mouseenter', function () {
       const $this = $(this);
@@ -40,7 +29,7 @@ function initFloorChoice() {
       tooltip = $(`<div class="floors__tooltip" style="display: none;" data-floor="${$this.data('floor')}">
 <div class="floors__tooltip-block">
   <span class="floors__tooltip-count">${$this.data('floor')}</span>
-  <div class="floors__tooltip-text">этаж</div>
+  <div class="floors__tooltip-text">${tooltipText}</div>
 </div>
 <div class="floors__tooltip-block">
   <span class="floors__tooltip-count">${$this.data('sale')}</span>
@@ -53,7 +42,7 @@ function initFloorChoice() {
     });
 
     $path.on('mouseleave', () => {
-      tooltip.fadeOut(250, function () {
+      tooltip.fadeOut(1000, function () {
         $(this).remove();
       });
     });
