@@ -12,7 +12,8 @@ function initFloorChoice() {
     href = $svg.data('href'),
     extension = $svg.data('extension'),
     $genPlanPath = $genPlanSvg.find('path'),
-    pathExtension = $genPlanPath.data('extension');
+    genPlanHref = $genPlanPath.data('section-href'),
+    genPlanExtension = $genPlanSvg.data('extension');
 
   showPathTooltip();
   hrefPath();
@@ -75,8 +76,8 @@ function initFloorChoice() {
 
   function hrefGenPlan() {
     $genPlanPath.on('click', function () {
-      if (typeof pathExtension !== 'undefined') {
-        window.location.href = href + $(this).data('section-href') + pathExtension;
+      if (typeof genPlanExtension !== 'undefined') {
+        window.location.href = $(this).data('section-href') + genPlanExtension;
       }
     });
   }
