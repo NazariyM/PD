@@ -2,58 +2,62 @@
 	+coverdiv
 	overflow: hidden
 	&__img
-		+coverdiv
 
 /* floors
 	----------------------------------- */
 .floors
 	+coverdiv
 	z-index: 1
+	&_sect-1-2 &__tooltip
 	
-	svg
-		//position: absolute
-		//top: 7.3%
-		//left: 0
-		//width: 65.2%
-		//height: 78.2%
-		//max-width: 1000px
-		//max-height: 730px
-		//z-index: 2
+	&_sect-3 &__tooltip
+		top: 28%
+		left: 18%
+		
+	&__svg
 		position: absolute
-		top: 7.3%
-		left: 0
-		width: 65.2%
-		height: 78.2%
-		max-width: 1000px
-		max-height: 730px
 		z-index: 2
-	&__item
-		position: absolute
 		&_1
-			top: 59.7%
+			top: 0
+			width: 50%
+			//top: 7.3%
 			left: 0
-			width: 42.00526%
-			height: 22.0875%
+			//width: 65.2%
+			//height: 78.2%
+			//max-width: 1000px
+			//max-height: 730px
 		&_2
-			top: 54.4%
-			left: 0
-			width: 41.94211%
-			height: 16.05%
-		&_3
-			top: 49.1%
-			left: 0
-			width: 42.1%
-			height: 12.7%
-			
-	path
-		fill: #fad5a9
-		opacity: 0
-		//opacity: .7
-		cursor: pointer
-		transition: .3s ease
-		&:hover
+			top: 12%
+			right: 23.2%
+			width: 47.8%
+		
+		path
+			fill: #fad5a9
+			//opacity: 0
 			opacity: .7
-			
+			cursor: pointer
+			transition: .3s ease
+			+hover
+				opacity: .7
+	
+	//&__item
+	//	position: absolute
+		//&_1
+		//	top: 59.7%
+		//	left: 0
+		//	width: 42.00526%
+		//	height: 22.0875%
+		//&_2
+		//	top: 54.4%
+		//	left: 0
+		//	width: 41.94211%
+		//	height: 16.05%
+		//&_3
+		//	top: 49.1%
+		//	left: 0
+		//	width: 42.1%
+		//	height: 12.7%
+		
 	&__tooltip
 		position: absolute
 		//right: 50%

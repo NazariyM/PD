@@ -35,9 +35,7 @@ function initFloorChoice() {
       ];
 
     $path.on('mouseenter', function () {
-      let $this = $(this),
-        positionX = $this[0].getBoundingClientRect().left - $svg.offset().left,
-        positionY = $this[0].getBoundingClientRect().top + $(window).scrollTop() - $svg.offset().top;
+      const $this = $(this);
 
       tooltip = $(`<div class="floors__tooltip" style="display: none;" data-floor="${$this.data('floor')}">
 <div class="floors__tooltip-block">
@@ -51,10 +49,6 @@ function initFloorChoice() {
 </div>`);
       tooltip
         .insertBefore($svg)
-        .css({
-          top: positionY + +offset[$this.data('floor')],
-          left: positionX - tooltip.outerWidth() + 700
-        })
         .fadeIn(250);
     });
 
@@ -67,10 +61,9 @@ function initFloorChoice() {
 
   function hrefPath() {
     $path.on('click', function () {
-      window.location.href = href + $(this).data('floor') + '.html';
-      // if (typeof extension !== 'undefined') {
-      //   window.location.href = href + $(this).data('floor') + extension;
-      // }
+      if (typeof extension !== 'undefined') {
+        window.location.href = href + $(this).data('floor') + extension;
+      }
     });
   }
 
