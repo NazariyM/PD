@@ -5,14 +5,18 @@ initFloorChoice();
 
 function initFloorChoice() {
   const $svg = $('.js-floor-svg');
+  const $genPlanSvg = $('.js-gen-plan-svg');
   // if (!$floorSvg.length) return;
 
   let $path = $svg.find('path'),
     href = $svg.data('href'),
-    extension = $svg.data('extension');
+    extension = $svg.data('extension'),
+    $genPlanPath = $genPlanSvg.find('path'),
+    pathExtension = $genPlanPath.data('extension');
 
   showPathTooltip();
   hrefPath();
+  hrefGenPlan();
 
   function showPathTooltip() {
     let tooltip,
@@ -66,6 +70,14 @@ function initFloorChoice() {
       // if (typeof extension !== 'undefined') {
       //   window.location.href = href + $(this).data('floor') + extension;
       // }
+    });
+  }
+
+  function hrefGenPlan() {
+    $genPlanPath.on('click', function () {
+      if (typeof pathExtension !== 'undefined') {
+        window.location.href = href + $(this).data('section-href') + pathExtension;
+      }
     });
   }
 }
